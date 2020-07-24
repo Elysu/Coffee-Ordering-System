@@ -9,7 +9,10 @@
                 <asp:ListItem Value="4.60" Text="Wet Cappuccino">Wet Cappuccino</asp:ListItem>
                 <asp:ListItem Value="4.70" Text="Dry Cappuccino">Dry Cappuccino</asp:ListItem>
                 <asp:ListItem Value="5.00" Text="Classic Americano">Classic Americano</asp:ListItem>
-                <asp:ListItem Value="4.00" Text="Latte">Latte</asp:ListItem>
+                <asp:ListItem Value="4.20" Text="Classic Latte">Classic Latte</asp:ListItem>
+                <asp:ListItem Value="4.30" Text="Vanilla Latte">Vanilla Latte</asp:ListItem>
+                <asp:ListItem Value="4.40" Text="Caramel Latte">Caramel Latte</asp:ListItem>
+                <asp:ListItem Value="4.80" Text="Mocha Latte">Mocha Latte</asp:ListItem>
             </asp:DropDownList>
 
             Quantity: <br />
