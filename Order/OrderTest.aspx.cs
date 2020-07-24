@@ -9,9 +9,9 @@ namespace Order
 {
     public partial class OrderTest : System.Web.UI.Page
     {
-        string sFlavor, sQuantity, sTopping, sDecoration;
+        string sCoffeeType, sQuantity, sTopping, sDecoration;
         int count, index;
-        double priceDecoration, priceFlavor, priceTopping, priceQuantity, totalPrice;
+        double priceDecoration, priceCoffeeType, priceTopping, priceQuantity, totalPrice;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,22 +22,22 @@ namespace Order
         {
             clearLabels();
 
-            sFlavor = flavor.SelectedItem.Text;
+            sCoffeeType = coffeeType.SelectedItem.Text;
             sQuantity = quantity.Text != null ? quantity.Text : "";
             sTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : "";
             sDecoration = "";
 
-            //flavor
-            switch (sFlavor)
+            //coffee types
+            switch (sCoffeeType)
             {
-                case "Red Velvet":
-                    image.ImageUrl = "images/red velvet.jpg";
+                case "Cappuccino":
+                    image.ImageUrl = "images/cappuccino.jpg";
                     break;
-                case "Chocolate":
-                    image.ImageUrl = "images/chocolate.jpg";
+                case "Americano":
+                    image.ImageUrl = "images/americano.jpg";
                     break;
-                case "Blueberry":
-                    image.ImageUrl = "images/blueberry.jpg";
+                case "Latte":
+                    image.ImageUrl = "images/latte.jpg";
                     break;
             }
 
@@ -72,12 +72,12 @@ namespace Order
             }
 
             //calculate total price
-            priceFlavor = Convert.ToDouble(flavor.SelectedValue);
+            priceCoffeeType = Convert.ToDouble(coffeeType.SelectedValue);
             priceTopping = sTopping != "" ? Convert.ToDouble(topping.SelectedValue) : 0.0;
             priceQuantity = sQuantity != "" ? Convert.ToDouble(sQuantity) : 0.0;
 
             //(flavor+topping+(decocations)) * quantity
-            totalPrice = (priceFlavor + priceTopping + priceDecoration) * priceQuantity;
+            totalPrice = (priceCoffeeType + priceTopping + priceDecoration) * priceQuantity;
 
 
             if (requiredQuantity.IsValid && rangeQuantity.IsValid && requiredTopping.IsValid && customDecoration.IsValid)
@@ -93,7 +93,7 @@ namespace Order
 
         private void clearLabels()
         {
-            outputFlavor.Text = "";
+            outputCoffee.Text = "";
             outputQuantity.Text = "";
             outputTopping.Text = "";
             outputDecoration.Text = "";
@@ -101,7 +101,7 @@ namespace Order
 
         private void outputs()
         {
-            outputFlavor.Text = sFlavor;
+            outputCoffee.Text = sCoffeeType;
             outputQuantity.Text = sQuantity;
             outputTopping.Text = sTopping;
             outputDecoration.Text = sDecoration;

@@ -15,13 +15,13 @@ namespace Order
     {
 
         /// <summary>
-        /// flavor control.
+        /// coffeeType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList flavor;
+        protected global::System.Web.UI.WebControls.DropDownList coffeeType;
 
         /// <summary>
         /// quantity control.
@@ -114,13 +114,13 @@ namespace Order
         protected global::System.Web.UI.WebControls.Image image;
 
         /// <summary>
-        /// outputFlavor control.
+        /// outputCoffee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label outputFlavor;
+        protected global::System.Web.UI.WebControls.Label outputCoffee;
 
         /// <summary>
         /// outputQuantity control.

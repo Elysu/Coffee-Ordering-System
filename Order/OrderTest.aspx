@@ -3,13 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div>
-            Flavor: <asp:DropDownList ID="flavor" runat="server">
-                <asp:ListItem Value="4.50" Text="Red Velvet">Red Velvet</asp:ListItem>
-                <asp:ListItem Value="5.00" Text="Chocolate">Chocolate</asp:ListItem>
-                <asp:ListItem Value="4.00" Text="Blueberry">Blueberry</asp:ListItem>
+            Coffee: <asp:DropDownList ID="coffeeType" runat="server">
+                <asp:ListItem Value="4.50" Text="Classic Cappuccino">Classic Cappuccino</asp:ListItem>
+                <asp:ListItem Value="4.90" Text="Iced Cappuccino">Iced Cappuccino</asp:ListItem>
+                <asp:ListItem Value="4.60" Text="Wet Cappuccino">Wet Cappuccino</asp:ListItem>
+                <asp:ListItem Value="4.70" Text="Dry Cappuccino">Dry Cappuccino</asp:ListItem>
+                <asp:ListItem Value="5.00" Text="Classic Americano">Classic Americano</asp:ListItem>
+                <asp:ListItem Value="4.00" Text="Latte">Latte</asp:ListItem>
             </asp:DropDownList>
-            <br />
-            <br />
 
             Quantity: <br />
             <asp:TextBox ID="quantity" runat="server" TextMode="Number"></asp:TextBox>
@@ -21,9 +22,10 @@
 
             Topping: <br />
             <asp:RadioButtonList ID="topping" runat="server">
-                <asp:ListItem Value="2.50" Text="Fondant"></asp:ListItem>
-                <asp:ListItem Value="3.50" Text="Buttercream"></asp:ListItem>
-                <asp:ListItem Value="2.00" Text="Naked"></asp:ListItem>
+                <asp:ListItem Value="2.50" Text="Cinnamon"></asp:ListItem>
+                <asp:ListItem Value="3.50" Text="Whipped Cream"></asp:ListItem>
+                <asp:ListItem Value="2.00" Text="Nutmeg"></asp:ListItem>
+                <asp:ListItem Value="0.00" Text="None"></asp:ListItem>
             </asp:RadioButtonList>
             <asp:RequiredFieldValidator ID="requiredTopping" runat="server" ControlToValidate="topping" EnableClientScript="False" ErrorMessage="Topping is required!" ForeColor="Red"></asp:RequiredFieldValidator>
             
@@ -51,8 +53,8 @@
         <br />
         <br />
 
-        Flavor: 
-        <asp:Label ID="outputFlavor" runat="server"></asp:Label>
+        Coffee: 
+        <asp:Label ID="outputCoffee" runat="server"></asp:Label>
         <br />
         Quantity: 
         <asp:Label ID="outputQuantity" runat="server"></asp:Label>
