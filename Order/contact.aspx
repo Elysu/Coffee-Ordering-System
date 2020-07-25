@@ -24,7 +24,9 @@
               </div>               
             </div>
             <div class="col-lg-6 col-md-6">
-              <div id="google-map"></div>
+              <div id="google-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15937.725065772864!2d101.7831425!3d2.977732!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdcb841d3762c7%3A0x4dc97330d731c530!2sNew%20Era%20University%20College!5e0!3m2!1sen!2smy!4v1595676608889!5m2!1sen!2smy" width="445" height="345" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
             </div> 
           </form>
         </section>

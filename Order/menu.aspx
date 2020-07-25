@@ -12,25 +12,17 @@
               <div class="tm-position-relative margin-bottom-30">              
                 <nav class="tm-side-menu">
                   <ul>
-                    <li><a href="#" class="active">Affogato</a></li>
-                    <li><a href="#">Caffè Americano</a></li>
-                    <li><a href="#">Caffè latte</a></li>
-                    <li><a href="#">Coffee milk</a></li>
-                    <li><a href="#">Café mocha</a></li>
+                    <li><a href="#" class="active">Americano</a></li>
                     <li><a href="#">Cappuccino</a></li>
-                    <li><a href="#">Espresso</a></li>
-                    <li><a href="#">Iced coffee</a></li>
-                    <li><a href="#">Instant coffee</a></li>
-                    <li><a href="#">Mocha</a></li>
-                    <li><a href="#">black coffee</a></li>
+                    <li><a href="#">Latte</a></li>
                   </ul>              
                 </nav>    
-                <img src="img/vertical-menu-bg.png" alt="Menu bg" class="tm-side-menu-bg">
+                <img src="img/vertical-menu-bg-3.png" alt="Menu bg" class="tm-side-menu-bg" width="242px">
               </div>  
             </div>            
             <div class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->
               <div class="tm-product">
-                <img src="img/menu-1.jpg" alt="Product">
+                <img src="images/americano/americano.jpg" alt="Product" width="136px" height="136px">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Americano 1</h3>
                   <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
@@ -39,47 +31,7 @@
                   <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>30</a>
                 </div>
               </div>
-              <div class="tm-product">
-                <img src="img/menu-2.jpg" alt="Product">
-                <div class="tm-product-text">
-                  <h3 class="tm-product-title">Americano 2</h3>
-                  <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
-                </div>
-                <div class="tm-product-price">
-                  <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>20</a>
-                </div>
-              </div>
-              <div class="tm-product">
-                <img src="img/menu-3.jpg" alt="Product">
-                <div class="tm-product-text">
-                  <h3 class="tm-product-title">Americano 3</h3>
-                  <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
-                </div>
-                <div class="tm-product-price">
-                  <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>15</a>
-                </div>
-              </div>
-              <div class="tm-product">
-                <img src="img/menu-4.jpg" alt="Product">
-                <div class="tm-product-text">
-                  <h3 class="tm-product-title">Americano 4</h3>
-                  <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
-                </div>
-                <div class="tm-product-price">
-                  <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>25</a>
-                </div>
-              </div>
-              <div class="tm-product">
-                <img src="img/menu-5.jpg" alt="Product">
-                <div class="tm-product-text">
-                  <h3 class="tm-product-title">Americano 5</h3>
-                  <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
-                </div>
-                <div class="tm-product-price">
-                  <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>45</a>
-                </div>
-              </div>
             </div>
           </div>          
-        </section>
+     </section>
 </asp:Content>

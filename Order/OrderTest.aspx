@@ -6,8 +6,6 @@
             Coffee: <asp:DropDownList ID="coffeeType" runat="server">
                 <asp:ListItem Value="4.50" Text="Classic Cappuccino">Classic Cappuccino</asp:ListItem>
                 <asp:ListItem Value="4.90" Text="Iced Cappuccino">Iced Cappuccino</asp:ListItem>
-                <asp:ListItem Value="4.60" Text="Wet Cappuccino">Wet Cappuccino</asp:ListItem>
-                <asp:ListItem Value="4.70" Text="Dry Cappuccino">Dry Cappuccino</asp:ListItem>
                 <asp:ListItem Value="5.00" Text="Classic Americano">Classic Americano</asp:ListItem>
                 <asp:ListItem Value="4.20" Text="Classic Latte">Classic Latte</asp:ListItem>
                 <asp:ListItem Value="4.30" Text="Vanilla Latte">Vanilla Latte</asp:ListItem>
@@ -15,11 +13,13 @@
                 <asp:ListItem Value="4.80" Text="Mocha Latte">Mocha Latte</asp:ListItem>
             </asp:DropDownList>
 
+            <br />
+            <br />
+
             Quantity: <br />
             <asp:TextBox ID="quantity" runat="server" TextMode="Number"></asp:TextBox>
             <asp:RequiredFieldValidator ID="requiredQuantity" runat="server" ControlToValidate="quantity" EnableClientScript="False" ErrorMessage="Quantity is required!" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:RangeValidator ID="rangeQuantity" runat="server" ErrorMessage="Number must be 1 to 12" EnableClientScript="False" ControlToValidate="quantity" MaximumValue="12" MinimumValue="1" Type="Integer" ForeColor="Red"></asp:RangeValidator>
-            <br />
             <br />
             <br />
 
@@ -34,13 +34,14 @@
             
             <br />
 
-            Decoration: <br />
-            <asp:CheckBoxList ID="decoration" runat="server">
-                <asp:ListItem Value="3.00" Text="M&amp;M"></asp:ListItem>
-                <asp:ListItem Value="1.00" Text="Snickers"></asp:ListItem>
-                <asp:ListItem Value="1.50" Text="Oreo"></asp:ListItem>
+            Add-Ons: <br />
+            <asp:CheckBoxList ID="addOns" runat="server">
+                <asp:ListItem Value="0.50" Text="Brown Sugar"></asp:ListItem>
+                <asp:ListItem Value="0.50" Text="White Sugar"></asp:ListItem>
+                <asp:ListItem Value="0.50" Text="Salt"></asp:ListItem>
+                <asp:ListItem Value="0.50" Text="Creamer"></asp:ListItem>
+                <asp:ListItem Value="0.50" Text="Stirrer"></asp:ListItem>
             </asp:CheckBoxList>
-            <asp:CustomValidator ID="customDecoration" runat="server" ErrorMessage="Decoration is required!" EnableClientScript="False" ForeColor="Red" OnServerValidate="customDecoration_ServerValidate"></asp:CustomValidator>
 
             <br />
 
@@ -68,7 +69,7 @@
         <br />
 
         Decoration: 
-        <asp:Label ID="outputDecoration" runat="server"></asp:Label>
+        <asp:Label ID="outputAddOns" runat="server"></asp:Label>
         <br />
 
         Total Price: 

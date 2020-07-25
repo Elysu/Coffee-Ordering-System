@@ -9,9 +9,9 @@ namespace Order
 {
     public partial class OrderTest : System.Web.UI.Page
     {
-        string sCoffeeType, sQuantity, sTopping, sDecoration;
+        string sCoffeeType, sQuantity, sTopping, sAddOns;
         int count, index;
-        double priceDecoration, priceCoffeeType, priceTopping, priceQuantity, totalPrice;
+        double priceAddOns, priceCoffeeType, priceTopping, priceQuantity, totalPrice;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,46 +25,57 @@ namespace Order
             sCoffeeType = coffeeType.SelectedItem.Text;
             sQuantity = quantity.Text != null ? quantity.Text : "";
             sTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : "";
-            sDecoration = "";
+            sAddOns = "";
 
             //coffee types
             switch (sCoffeeType)
             {
-                case "Cappuccino":
-                    image.ImageUrl = "images/cappuccino.jpg";
+                case "Classic Cappuccino":
+                    image.ImageUrl = "images/cappuccino/cappuccino.jpg";
                     break;
-                case "Americano":
-                    image.ImageUrl = "images/americano.jpg";
+                case "Iced Cappuccino":
+                    image.ImageUrl = "images/cappuccino/iced cappuccino.jpg";
                     break;
-                case "Latte":
-                    image.ImageUrl = "images/latte.jpg";
+                case "Classic Americano":
+                    image.ImageUrl = "images/americano/americano.jpg";
+                    break;
+                case "Classic Latte":
+                    image.ImageUrl = "images/latte/latte.jpg";
+                    break;
+                case "Vanilla Latte":
+                    image.ImageUrl = "images/latte/vanilla latte.jpg";
+                    break;
+                case "Caramel Latte":
+                    image.ImageUrl = "images/latte/caramel latte.jpg";
+                    break;
+                case "Mocha Latte":
+                    image.ImageUrl = "images/latte/mocha latte.jpg";
                     break;
             }
 
-
-            //loop for decoration price
+            //loop for Add-Ons price
             count = 0;
-            priceDecoration = 0.00;
-            for (int i = 0; i < decoration.Items.Count; i++)
+            priceAddOns = 0.00;
+            for (int i = 0; i < addOns.Items.Count; i++)
             {
-                if (decoration.Items[i].Selected)
+                if (addOns.Items[i].Selected)
                 {
-                    priceDecoration += Convert.ToDouble(decoration.Items[i].Value);
+                    priceAddOns += Convert.ToDouble(addOns.Items[i].Value);
                     count++;
                 }
             }
 
-            //loop for decoration
+            //loop for Add-Ons
             index = 1;
-            foreach (ListItem listDeco in decoration.Items)
+            foreach (ListItem listDeco in addOns.Items)
             {
                 if (listDeco.Selected)
                 {
-                    sDecoration += listDeco.Text;
+                    sAddOns += listDeco.Text;
 
                     if (index >= 1 && index != count)
                     {
-                        sDecoration += ", ";
+                        sAddOns += ", ";
                     }
 
                     index++;
@@ -77,10 +88,10 @@ namespace Order
             priceQuantity = sQuantity != "" ? Convert.ToDouble(sQuantity) : 0.0;
 
             //(flavor+topping+(decocations)) * quantity
-            totalPrice = (priceCoffeeType + priceTopping + priceDecoration) * priceQuantity;
+            totalPrice = (priceCoffeeType + priceTopping + priceAddOns) * priceQuantity;
 
 
-            if (requiredQuantity.IsValid && rangeQuantity.IsValid && requiredTopping.IsValid && customDecoration.IsValid)
+            if (requiredQuantity.IsValid && rangeQuantity.IsValid && requiredTopping.IsValid)
             {
                 outputs();
                 output.Visible = true;
@@ -96,7 +107,7 @@ namespace Order
             outputCoffee.Text = "";
             outputQuantity.Text = "";
             outputTopping.Text = "";
-            outputDecoration.Text = "";
+            outputAddOns.Text = "";
         }
 
         private void outputs()
@@ -104,21 +115,23 @@ namespace Order
             outputCoffee.Text = sCoffeeType;
             outputQuantity.Text = sQuantity;
             outputTopping.Text = sTopping;
-            outputDecoration.Text = sDecoration;
+            outputAddOns.Text = sAddOns!="" ? sAddOns : "None";
             outputTotal.Text = "RM " + String.Format("{0:0.00}", totalPrice);
         }
 
+        /*
         protected void customDecoration_ServerValidate(object source, ServerValidateEventArgs args)
         {
             args.IsValid = false;
 
-            for (int i = 0; i < decoration.Items.Count; i++)
+            for (int i = 0; i < addOns.Items.Count; i++)
             {
-                if (decoration.Items[i].Selected)
+                if (addOns.Items[i].Selected)
                 {
                     args.IsValid = true;
                 }
             }
         }
+        */
     }
 }

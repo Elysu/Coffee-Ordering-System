@@ -6,11 +6,11 @@
           <div class="col-lg-9 col-md-9 col-sm-8">
             <h2 class="tm-section-header gold-text tm-handwriting-font">The Best Coffee for you</h2>
             <h2>Cafe House</h2>
-            <p class="tm-welcome-description">This is free HTML5 website template from <span class="blue-text">template</span><span class="green-text">mo</span>. Fndimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Ettiam sit amet orci eget eros faucibus tincidunt.</p>
+            <p class="tm-welcome-description">Cafe House offers the best coffee for your personal taste. Feeling bored and tired? Take a look at the coffees from us and start customizing your own coffee with various types of toppings today!</p>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-4 tm-welcome-img-container">
             <div class="inline-block shadow-img">
-              <img src="img/1.jpg" alt="Image" class="img-circle img-thumbnail">  
+              <img src="images/cappuccino/cappuccino.jpg" alt="Image" class="img-circle img-thumbnail" width="168px" height="168px">  
             </div>              
           </div>            
         </section>          
@@ -21,24 +21,24 @@
           </div>
           <div class="col-lg-12 tm-popular-items-container">
             <div class="tm-popular-item">
-              <img src="img/popular-1.jpg" alt="Popular" class="tm-popular-item-img">
+              <img src="images/americano/americano.jpg" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
               <div class="tm-popular-item-description">
-                <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">a</span>mericano</h3><hr class="tm-popular-item-hr">
-                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. sed ipsum.</p>
+                <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">A</span>mericano</h3><hr class="tm-popular-item-hr">
+                <p>Americano is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee.</p>
               </div>              
             </div>
             <div class="tm-popular-item">
-              <img src="img/popular-2.jpg" alt="Popular" class="tm-popular-item-img">
+              <img src="images/cappuccino/cappuccino.jpg" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
               <div class="tm-popular-item-description">
-                <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">c</span>appuccino</h3><hr class="tm-popular-item-hr">
-                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. sed ipsum.</p>
+                <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">C</span>appuccino</h3><hr class="tm-popular-item-hr">
+                <p>Cappuccino is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam (microfoam).</p>
               </div>              
             </div>
             <div class="tm-popular-item">
-              <img src="img/popular-3.jpg" alt="Popular" class="tm-popular-item-img">
+              <img src="images/latte/latte.jpg" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
               <div class="tm-popular-item-description">
-                <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">m</span>ocha</h3><hr class="tm-popular-item-hr">
-                <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. sed ipsum.</p>
+                <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">L</span>atte</h3><hr class="tm-popular-item-hr">
+                <p>Latte is a coffee drink made with espresso and steamed milk.</p>
               </div>
             </div>
           </div>          

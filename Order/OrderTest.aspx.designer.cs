@@ -69,22 +69,13 @@ namespace Order
         protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTopping;
 
         /// <summary>
-        /// decoration control.
+        /// addOns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList decoration;
-
-        /// <summary>
-        /// customDecoration control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator customDecoration;
+        protected global::System.Web.UI.WebControls.CheckBoxList addOns;
 
         /// <summary>
         /// submit control.
@@ -141,13 +132,13 @@ namespace Order
         protected global::System.Web.UI.WebControls.Label outputTopping;
 
         /// <summary>
-        /// outputDecoration control.
+        /// outputAddOns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label outputDecoration;
+        protected global::System.Web.UI.WebControls.Label outputAddOns;
 
         /// <summary>
         /// outputTotal control.
