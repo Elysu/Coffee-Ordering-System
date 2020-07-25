@@ -12,23 +12,23 @@
               <div class="tm-position-relative margin-bottom-30">              
                 <nav class="tm-side-menu">
                   <ul>
-                    <li><a href="#" class="active">Americano</a></li>
-                    <li><a href="#">Cappuccino</a></li>
-                    <li><a href="#">Latte</a></li>
-                  </ul>              
-                </nav>    
+                    <li><a id="btnAmericano" runat="server" class="active" onserverclick="clickAmericano">Americano</a></li>
+                    <li><a id="btnCappuccino" runat="server" onserverclick="clickCappuccino">Cappuccino</a></li>
+                    <li><a id="btnLatte" runat="server" onserverclick="clickLatte">Latte</a></li>
+                  </ul>  
+                </nav>
                 <img src="img/vertical-menu-bg-3.png" alt="Menu bg" class="tm-side-menu-bg" width="242px">
-              </div>  
-            </div>            
-            <div class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->
+              </div>
+            </div>
+            <div id="menuContent" runat="server" class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->
               <div class="tm-product">
                 <img src="images/americano/americano.jpg" alt="Product" width="136px" height="136px">
                 <div class="tm-product-text">
-                  <h3 class="tm-product-title">Americano 1</h3>
-                  <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
+                  <h3 class="tm-product-title">Classic Americano</h3>
+                  <p class="tm-product-description">Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance.</p>
                 </div>
                 <div class="tm-product-price">
-                  <a href="#" class="tm-product-price-link tm-handwriting-font"><span class="tm-product-price-currency">$</span>30</a>
+                  <a href="#" class="tm-product-price-link tm-handwriting-font">$5</a>
                 </div>
               </div>
             </div>

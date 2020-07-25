@@ -99,6 +99,8 @@
     <Content Include="img\vertical-menu-bg.png" />
     <Content Include="index.aspx" />
     <Content Include="js\jquery-1.11.2.min.js" />
+    <Content Include="js\jquery-3.5.1.min.js" />
+    <Content Include="js\menuJS.js" />
     <Content Include="js\templatemo-script.js" />
     <Content Include="menu.aspx" />
     <Content Include="OrderTest.aspx" />

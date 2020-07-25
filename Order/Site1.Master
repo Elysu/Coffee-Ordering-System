@@ -8,7 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cafe House Template</title>
-    <script src="jquery/jquery-3.5.1.min.js"></script>
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+    <script type="text/javascript" src="js/templatemo-script.js"></script>      <!-- Templatemo Script -->
 <!-- 
 Cafe House Template
 http://www.templatemo.com/tm-466-cafe-house
@@ -124,9 +127,6 @@ http://www.templatemo.com/tm-466-cafe-house
                </div>
              </div>
            </footer> <!-- Footer content-->  
-           <!-- JS -->
-           <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
-           <script type="text/javascript" src="js/templatemo-script.js"></script>      <!-- Templatemo Script -->
         </div>
     </form>
 </body>

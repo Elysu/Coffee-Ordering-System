@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div>
             Coffee: <asp:DropDownList ID="coffeeType" runat="server">
+                <asp:ListItem Value="5.00" Text="Classic Americano">Classic Americano</asp:ListItem>
                 <asp:ListItem Value="4.50" Text="Classic Cappuccino">Classic Cappuccino</asp:ListItem>
                 <asp:ListItem Value="4.90" Text="Iced Cappuccino">Iced Cappuccino</asp:ListItem>
-                <asp:ListItem Value="5.00" Text="Classic Americano">Classic Americano</asp:ListItem>
                 <asp:ListItem Value="4.20" Text="Classic Latte">Classic Latte</asp:ListItem>
                 <asp:ListItem Value="4.30" Text="Vanilla Latte">Vanilla Latte</asp:ListItem>
                 <asp:ListItem Value="4.40" Text="Caramel Latte">Caramel Latte</asp:ListItem>
