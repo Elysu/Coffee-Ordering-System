@@ -20,6 +20,7 @@ namespace Order
                     break;
                 case "/menu.aspx":
                     menuButton.Attributes["class"] = "active";
+                    btnDetails.InnerText = "Menu";
                     break;
                 case "/contact.aspx":
                     contactButton.Attributes["class"] = "active";

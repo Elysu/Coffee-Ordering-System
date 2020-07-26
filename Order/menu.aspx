@@ -17,12 +17,12 @@
                     <li><a id="btnLatte" runat="server" onserverclick="clickLatte">Latte</a></li>
                   </ul>  
                 </nav>
-                <img src="img/vertical-menu-bg-3.png" alt="Menu bg" class="tm-side-menu-bg" width="242px">
+                <img src="img/vertical-menu-bg-3.png" alt="Menu bg" class="tm-side-menu-bg" width="242">
               </div>
             </div>
             <div id="menuContent" runat="server" class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->
               <div class="tm-product">
-                <img src="images/americano/americano.jpg" alt="Product" width="136px" height="136px">
+                <img src="images/americano/americano.jpg" alt="Product" width="136" height="136">
                 <div class="tm-product-text">
                   <h3 class="tm-product-title">Classic Americano</h3>
                   <p class="tm-product-description">Espresso shots topped with hot water create a light layer of crema culminating in this wonderfully rich cup with depth and nuance.</p>

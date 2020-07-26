@@ -10,7 +10,7 @@
           </div>
           <div class="col-lg-3 col-md-3 col-sm-4 tm-welcome-img-container">
             <div class="inline-block shadow-img">
-              <img src="images/cappuccino/cappuccino.jpg" alt="Image" class="img-circle img-thumbnail" width="168px" height="168px">  
+              <img src="images/cappuccino/cappuccino.jpg" alt="Image" class="img-circle img-thumbnail" width="168" height="168">  
             </div>              
           </div>            
         </section>          
@@ -21,21 +21,21 @@
           </div>
           <div class="col-lg-12 tm-popular-items-container">
             <div class="tm-popular-item">
-              <img src="images/americano/americano.jpg" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+              <img src="images/americano/americano.jpg" alt="Popular" class="tm-popular-item-img" width="286" height="220">
               <div class="tm-popular-item-description">
                 <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">A</span>mericano</h3><hr class="tm-popular-item-hr">
                 <p>Americano is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee.</p>
               </div>              
             </div>
             <div class="tm-popular-item">
-              <img src="images/cappuccino/cappuccino.jpg" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+              <img src="images/cappuccino/cappuccino.jpg" alt="Popular" class="tm-popular-item-img" width="286" height="220">
               <div class="tm-popular-item-description">
                 <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">C</span>appuccino</h3><hr class="tm-popular-item-hr">
                 <p>Cappuccino is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam (microfoam).</p>
               </div>              
             </div>
             <div class="tm-popular-item">
-              <img src="images/latte/latte.jpg" alt="Popular" class="tm-popular-item-img" width="286px" height="166px">
+              <img src="images/latte/latte.jpg" alt="Popular" class="tm-popular-item-img" width="286" height="220">
               <div class="tm-popular-item-description">
                 <h3 class="tm-handwriting-font tm-popular-item-title"><span class="tm-handwriting-font bigger-first-letter">L</span>atte</h3><hr class="tm-popular-item-hr">
                 <p>Latte is a coffee drink made with espresso and steamed milk.</p>
