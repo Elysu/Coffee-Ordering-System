@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,7 +20,24 @@ namespace Order
         {
             if (rangePassword.IsValid && requiredPassword.IsValid && requiredEmail.IsValid)
             {
-                //string dbPassword = 
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["userCon"].ToString());
+
+                string userEmail = email.Text;
+                string userPassword = password.Text;
+
+                con.Open();
+                string query = "select * from Members where MemberEmail='"+userEmail+"' and MemberPassword='"+userPassword+"'";
+
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                if(sdr.Read())
+                {
+                    Response.Redirect("index.aspx");
+                } else
+                {
+                    errorMsg.Text = "Incorrect Email or Password!";
+                }
             }
         }
     }

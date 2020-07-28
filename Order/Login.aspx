@@ -13,5 +13,7 @@
     <asp:RequiredFieldValidator ID="requiredPassword" runat="server" ErrorMessage="Password must not be empty" EnableClientScript="False" ControlToValidate="password"></asp:RequiredFieldValidator>
     <asp:RangeValidator ID="rangePassword" runat="server" ErrorMessage="Password must be within 6 to 30 characters" EnableClientScript="False" ControlToValidate="requiredPassword" MinimumValue="6" MaximumValue="30"></asp:RangeValidator>
 
+    <asp:Label ID="errorMsg" runat="server" Text=""></asp:Label>
+
     <asp:Button ID="submit" runat="server" Text="Login" OnClick="submit_Click" />
 </asp:Content>
