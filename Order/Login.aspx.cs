@@ -36,7 +36,7 @@ namespace Order
                     Response.Redirect("index.aspx");
                 } else
                 {
-                    errorMsg.Text = "Incorrect Email or Password!";
+                    errorMsg.Text = "Incorrect Email or Password";
                 }
             }
         }
