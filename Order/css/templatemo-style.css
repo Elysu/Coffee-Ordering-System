@@ -652,6 +652,13 @@ button.tm-more-button {
   border-radius: 10px;
 }
 
+#loginButton {
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
 @media screen and (max-width: 991px) {
   .tm-welcome-content { margin-bottom: 250px; }
   .tm-main-section { padding-top: 200px; }
@@ -726,6 +733,12 @@ button.tm-more-button {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; 
+  }
+
+  #loginButton {
+    border: none;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
   }
 }
 

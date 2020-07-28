@@ -36,7 +36,6 @@ http://www.templatemo.com/tm-466-cafe-house
 <body>
     <form id="form1" runat="server">
         <div>
-
             <!-- Preloader -->
             <div id="loader-wrapper">
               <div id="loader"></div>
@@ -62,28 +61,15 @@ http://www.templatemo.com/tm-466-cafe-house
                         <li><a id="homeButton" runat="server" href="index.aspx">Home</a></li>
                         <li><a id="menuButton" runat="server" href="menu.aspx">Menu</a></li>
                         <li><a id="contactButton" runat="server" href="contact.aspx">Contact</a></li>
+                        <li><a id="coffeeButton" runat="server" href="ordertest.aspx">Order Now</a></li>
+                        <li><a id="loginButton" runat="server" href="ordertest.aspx">Login</a></li>               
                       </ul>
                     </nav>   
                   </div>           
                 </div>    
               </div>
             </div>
-            <section class="tm-welcome-section">
-              <div class="container tm-position-relative">
-                <div class="tm-lights-container">
-                  <img src="img/light.png" alt="Light" class="light light-1">
-                  <img src="img/light.png" alt="Light" class="light light-2">
-                  <img src="img/light.png" alt="Light" class="light light-3">  
-                </div>        
-                <div id="divWelcome" runat="server" class="row tm-welcome-content">
-                  <h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="img/header-line.png" alt="Line" class="tm-header-line">&nbsp;Welcome To&nbsp;&nbsp;<img src="img/header-line.png" alt="Line" class="tm-header-line"></h2>
-                  <h2 class="gold-text tm-welcome-header-2">Cafe House</h2>
-                  <p class="gray-text tm-welcome-description"></p>
-                  <a id="btnDetails" runat="server" href="#main" class="tm-more-button tm-more-button-welcome">Details</a>
-                </div>
-                <img src="img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">             
-              </div>      
-            </section>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
             <div class="tm-main-section light-gray-bg">
               <div class="container" id="main">
                   <!-- main code here -->

@@ -11,25 +11,25 @@ namespace Order
 {
 
 
-    public partial class index
+    public partial class Login
     {
 
         /// <summary>
-        /// divWelcome control.
+        /// email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divWelcome;
+        protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
-        /// btnDetails control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnDetails;
+        protected global::System.Web.UI.WebControls.TextBox password;
     }
 }

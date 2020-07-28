@@ -15,7 +15,7 @@ namespace Order
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.MaintainScrollPositionOnPostBack = true;
         }
 
         protected void submit_Click(object sender, EventArgs e)

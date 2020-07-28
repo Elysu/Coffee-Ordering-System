@@ -60,22 +60,31 @@ namespace Order
         protected global::System.Web.UI.HtmlControls.HtmlAnchor contactButton;
 
         /// <summary>
-        /// divWelcome control.
+        /// coffeeButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divWelcome;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor coffeeButton;
 
         /// <summary>
-        /// btnDetails control.
+        /// loginButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnDetails;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor loginButton;
+
+        /// <summary>
+        /// ContentPlaceHolder2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
 
         /// <summary>
         /// ContentPlaceHolder1 control.
