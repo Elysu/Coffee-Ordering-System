@@ -13,5 +13,13 @@ namespace Order
         {
 
         }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+            if (rangePassword.IsValid && requiredPassword.IsValid && requiredEmail.IsValid)
+            {
+                //string dbPassword = 
+            }
+        }
     }
 }
