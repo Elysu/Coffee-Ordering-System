@@ -11,7 +11,7 @@ namespace Order
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["New"] == null)
+            if (Session["MemberEmail"] == null)
             {
                 Response.Redirect("Login.aspx");
             }
@@ -24,7 +24,9 @@ namespace Order
 
         protected void logoutConfirm_Click(object sender, EventArgs e)
         {
-            Session["New"] = null;
+            Session["MemberEmail"] = null;
+            Session["MemberId"] = null;
+            Session["MemberRole"] = null;
             Response.Redirect("index.aspx");
         }
     }

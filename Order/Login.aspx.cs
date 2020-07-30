@@ -13,7 +13,7 @@ namespace Order
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["New"] != null)
+            if (Session["MemberEmail"] != null)
             {
                 Response.Redirect("Logout.aspx");
             }
@@ -33,7 +33,6 @@ namespace Order
 
                 SqlCommand cmd = new SqlCommand(query, con);
                 int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-
                 con.Close();
 
                 if (temp == 1)
@@ -41,30 +40,49 @@ namespace Order
                     con.Open();
                     string checkPasswordQuery = "select MemberPassword from Members where MemberEmail='"+userEmail+"'";
                     SqlCommand cmdPassword = new SqlCommand(checkPasswordQuery, con);
-
                     string dbPassword = cmdPassword.ExecuteScalar().ToString().Replace(" ", "");
+
+                    string MemberIdQuery = "select MemberId from Members where MemberEmail='" + userEmail + "'";
+                    SqlCommand cmdMemberId = new SqlCommand(MemberIdQuery, con);
+                    string dbMemberId = cmdMemberId.ExecuteScalar().ToString();
+
+                    string MemberUsernameQuery = "select MemberUsername from Members where MemberEmail='" + userEmail + "'";
+                    SqlCommand cmdMemberUsername = new SqlCommand(MemberUsernameQuery, con);
+                    string dbMemberUsername = cmdMemberUsername.ExecuteScalar().ToString();
+
+                    string roleQuery = "select MemberPassword from Members where MemberEmail='" + userEmail + "'";
+                    SqlCommand cmdRole = new SqlCommand(roleQuery, con);
+                    string dbRole = cmdRole.ExecuteScalar().ToString();
 
                     if (userPassword != "")
                     {
-                        if (dbPassword == userPassword)
+                        if (dbPassword != "" && dbMemberId != "" && dbMemberUsername != "" && dbRole != "")
                         {
-                            Session["New"] = userEmail;
-                            Response.Redirect("index.aspx");
+                            if (dbPassword == userPassword)
+                            {
+                                Session["MemberEmail"] = userEmail;
+                                Session["MemberId"] = dbMemberId;
+                                Session["MemberUsername"] = dbMemberUsername;
+                                Session["MemberRole"] = dbRole;
+                                Response.Redirect("index.aspx");
+                            }
+                            else
+                            {
+                                errorMsg.Text = "Incorrect Password";
+                            }
                         }
                         else
                         {
-                            errorMsg.Text = "Incorrect Password";
+                            errorMsg.Text = "Database error";
                         }
-                    } else
-                    {
-                        errorMsg.Text = "";
                     }
                 }
                 else
                 {
                     errorMsg.Text = "User does not exists.";
                 }
-            } else
+            } 
+            else
             {
                 errorMsg.Text = "";
             }

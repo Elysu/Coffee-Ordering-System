@@ -26,9 +26,9 @@ namespace Order
                     break;
             }
 
-            if (Session["New"] != null)
+            if (Session["MemberEmail"] != null)
             {
-                btnLoginSwitch.InnerHtml = "<a runat='server' id='displayName'>" + Session["New"].ToString() + "</a>" +
+                btnLoginSwitch.InnerHtml = "<a runat='server' id='displayName'>" + Session["MemberUsername"].ToString() + "</a>" +
                     "<a runat='server' href='logout.aspx' id='logoutButton'>Logout</a>";
             }
             else
