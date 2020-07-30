@@ -25,6 +25,21 @@ namespace Order
                     contactButton.Attributes["class"] = "active";
                     break;
             }
+
+            if (Session["New"] != null)
+            {
+                btnLoginSwitch.InnerHtml = "<a runat='server' id='displayName'>" + Session["New"].ToString() + "</a>" +
+                    "<a runat='server' href='logout.aspx' id='logoutButton'>Logout</a>";
+            }
+            else
+            {
+                btnLoginSwitch.InnerHtml = "<a id='loginButton' runat='server' href='login.aspx'>Login</a>";
+            }
+        }
+
+        protected void logout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

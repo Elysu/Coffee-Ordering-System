@@ -13,7 +13,10 @@ namespace Order
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["New"] != null)
+            {
+                Response.Redirect("Logout.aspx");
+            }
         }
 
         protected void submit_Click(object sender, EventArgs e)

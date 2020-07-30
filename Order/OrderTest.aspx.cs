@@ -15,6 +15,11 @@ namespace Order
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["New"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
             Page.MaintainScrollPositionOnPostBack = true;
         }
 

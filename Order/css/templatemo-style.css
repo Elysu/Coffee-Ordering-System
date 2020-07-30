@@ -659,6 +659,20 @@ button.tm-more-button {
     margin-left: 20px;
 }
 
+#logoutButton {
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+#displayName {
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
 @media screen and (max-width: 991px) {
   .tm-welcome-content { margin-bottom: 250px; }
   .tm-main-section { padding-top: 200px; }
@@ -736,6 +750,18 @@ button.tm-more-button {
   }
 
   #loginButton {
+    border: none;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+
+  #logoutButton {
+    border: none;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+
+  #displayName {
     border: none;
     padding-bottom: 15px;
     margin-bottom: 5px;

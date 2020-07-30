@@ -107,6 +107,7 @@
     <Content Include="js\menuJS.js" />
     <Content Include="js\templatemo-script.js" />
     <Content Include="Login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="menu.aspx" />
     <Content Include="OrderTest.aspx" />
     <Content Include="Web.config" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="menu.aspx.cs">
       <DependentUpon>menu.aspx</DependentUpon>
