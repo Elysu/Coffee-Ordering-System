@@ -7,18 +7,19 @@
     
     <br />
     
-    Email:<asp:TextBox ID="regEmail" runat="server"></asp:TextBox>
+    Email:<asp:TextBox ID="regEmail" runat="server" TextMode="Email"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegEmail" runat="server" ErrorMessage="Email is required" ControlToValidate="regEmail" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
     
     <br />
     
-    Password:<asp:TextBox ID="regPassword" runat="server"></asp:TextBox>
+    Password:<asp:TextBox ID="regPassword" runat="server" TextMode="Password"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegPassword" runat="server" ErrorMessage="Password is required" ControlToValidate="regPassword" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
     
     <br />
 
-    Confirm Password:<asp:TextBox ID="regConfirmPassword" runat="server"></asp:TextBox>
+    Confirm Password:<asp:TextBox ID="regConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegConfirmPassword" runat="server" ErrorMessage="Please enter your password again." ControlToValidate="regConfirmPassword" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:CompareValidator ID="compareRegConfirmPassword" runat="server" ErrorMessage="Confirm Password must be the same as Password" ControlToValidate="regConfirmPassword" EnableClientScript="False" ForeColor="Red" ControlToCompare="regPassword"></asp:CompareValidator>
 
     <br />
     
@@ -27,7 +28,7 @@
     
     <br />
     
-    Phone No.:<asp:TextBox ID="regPhone" runat="server"></asp:TextBox>
+    Phone No.:<asp:TextBox ID="regPhone" runat="server" TextMode="Phone"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegPhone" runat="server" ErrorMessage="Phone number is required" ControlToValidate="regPhone" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
     
     <br />
@@ -36,5 +37,5 @@
 
     <br />
     
-    <asp:Button ID="submitReg" runat="server" Text="Button" />
+    <asp:Button ID="submitReg" runat="server" Text="Register" OnClick="submitReg_Click" />
 </asp:Content>

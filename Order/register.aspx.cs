@@ -13,5 +13,19 @@ namespace Order
         {
 
         }
+
+        protected void submitReg_Click(object sender, EventArgs e)
+        {
+            if (reqRegUsername.IsValid &&
+                reqRegEmail.IsValid &&
+                reqRegPassword.IsValid &&
+                reqRegConfirmPassword.IsValid &&
+                compareRegConfirmPassword.IsValid &&
+                reqRegName.IsValid &&
+                reqRegPhone.IsValid)
+            {
+                regErrorMsg.Text = "Successful";
+            }
+        }
     }
 }
