@@ -19,14 +19,14 @@ namespace Order
             }
         }
 
-        protected void submit_Click(object sender, EventArgs e)
+        protected void submitLogin_Click(object sender, EventArgs e)
         {
-            if (requiredPassword.IsValid && requiredEmail.IsValid)
+            if (reqLoginEmail.IsValid && reqLoginPassword.IsValid)
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["userConn"].ToString());
 
-                string userEmail = email.Text;
-                string userPassword = password.Text;
+                string userEmail = loginEmail.Text;
+                string userPassword = loginPassword.Text;
 
                 con.Open();
                 string query = "select count(*) from Members where MemberEmail='"+userEmail+"'";
@@ -68,23 +68,23 @@ namespace Order
                             }
                             else
                             {
-                                errorMsg.Text = "Incorrect Password";
+                                loginErrorMsg.Text = "Incorrect Password";
                             }
                         }
                         else
                         {
-                            errorMsg.Text = "Database error";
+                            loginErrorMsg.Text = "Database error";
                         }
                     }
                 }
                 else
                 {
-                    errorMsg.Text = "User does not exists.";
+                    loginErrorMsg.Text = "User does not exists.";
                 }
             } 
             else
             {
-                errorMsg.Text = "";
+                loginErrorMsg.Text = "";
             }
         }
     }

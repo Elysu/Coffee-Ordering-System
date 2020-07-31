@@ -15,57 +15,57 @@ namespace Order
     {
 
         /// <summary>
-        /// email control.
+        /// loginEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox loginEmail;
 
         /// <summary>
-        /// requiredEmail control.
+        /// reqLoginEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLoginEmail;
 
         /// <summary>
-        /// password control.
+        /// loginPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.TextBox loginPassword;
 
         /// <summary>
-        /// requiredPassword control.
+        /// reqLoginPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredPassword;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLoginPassword;
 
         /// <summary>
-        /// errorMsg control.
+        /// loginErrorMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errorMsg;
+        protected global::System.Web.UI.WebControls.Label loginErrorMsg;
 
         /// <summary>
-        /// submit control.
+        /// submitLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Button submitLogin;
     }
 }

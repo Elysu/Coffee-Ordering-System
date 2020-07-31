@@ -110,6 +110,7 @@
     <Content Include="logout.aspx" />
     <Content Include="menu.aspx" />
     <Content Include="OrderTest.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="Web.config" />
     <Content Include="OrderForm.aspx" />
   </ItemGroup>
@@ -163,6 +164,13 @@
     </Compile>
     <Compile Include="OrderForm.aspx.designer.cs">
       <DependentUpon>OrderForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
