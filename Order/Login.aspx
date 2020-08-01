@@ -5,12 +5,12 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     Email:<asp:TextBox ID="loginEmail" runat="server" TextMode="Email"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="reqLoginEmail" runat="server" ErrorMessage="Email must not be empty" EnableClientScript="False" ControlToValidate="email" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator ID="reqLoginEmail" runat="server" ErrorMessage="Email must not be empty" EnableClientScript="False" ControlToValidate="loginEmail" ForeColor="Red"></asp:RequiredFieldValidator>
 
     <br />
 
     Password:<asp:TextBox ID="loginPassword" runat="server" TextMode="Password"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="reqLoginPassword" runat="server" ErrorMessage="Password must not be empty" EnableClientScript="False" ControlToValidate="password" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator ID="reqLoginPassword" runat="server" ErrorMessage="Password must not be empty" EnableClientScript="False" ControlToValidate="loginPassword" ForeColor="Red"></asp:RequiredFieldValidator>
 
     <br />
 

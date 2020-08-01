@@ -26,6 +26,7 @@ namespace Order
             string name = regName.Text;
             string phone = regPhone.Text;
 
+            //validation passed
             if (reqRegUsername.IsValid &&
                 reqRegEmail.IsValid &&
                 reqRegPassword.IsValid &&
@@ -35,20 +36,65 @@ namespace Order
                 reqRegPhone.IsValid)
             {
                 SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
 
                 string checkEmailExist = "select count(*) from Members where MemberEmail='" + email + "'";
                 SqlCommand cmdCheckEmail = new SqlCommand(checkEmailExist, con);
                 int emailExist = Convert.ToInt32(cmdCheckEmail.ExecuteScalar().ToString());
 
-                string checkUsernameExist = "select count(*) from Members where MemberEmail='" + username + "'";
+                string checkUsernameExist = "select count(*) from Members where MemberUsername='" + username + "'";
                 SqlCommand cmdCheckUsername = new SqlCommand(checkUsernameExist, con);
                 int usernameExist = Convert.ToInt32(cmdCheckUsername.ExecuteScalar().ToString());
 
+                //if username and email doesn't exist
                 if (emailExist != 1 && usernameExist != 1)
                 {
-                    string insertSQL = "INSERT INTO Members (MemberName, MemberPhone, MemberEmail, MemberPassword, MemberRole, MemberUsername)";
+                    string role = "user";
+
+                    //insert query
+                    string insertSQL;
+                    insertSQL = "INSERT INTO Members (MemberName, MemberPhone, MemberEmail, MemberPassword, MemberRole, MemberUsername)";
                     insertSQL += "VALUES ('";
                     insertSQL += name + "', '";
+                    insertSQL += phone + "', '";
+                    insertSQL += email + "', '";
+                    insertSQL += password + "', '";
+                    insertSQL += role + "', '";
+                    insertSQL += username + "')";
+
+                    SqlCommand cmdInsertSQL = new SqlCommand(insertSQL, con);
+
+                    int added = 0;
+                    try
+                    {
+                        added = cmdInsertSQL.ExecuteNonQuery();
+
+                        //check if record was successfully inserted
+                        if (added > 0)
+                        {
+                            string MemberIdQuery = "select MemberId from Members where MemberUsername='" + username + "'";
+                            SqlCommand cmdMemberId = new SqlCommand(MemberIdQuery, con);
+                            string MemberId = cmdMemberId.ExecuteScalar().ToString();
+
+                            Session["MemberEmail"] = email;
+                            Session["MemberId"] = MemberId;
+                            Session["MemberUsername"] = username;
+                            Session["MemberRole"] = role;
+                            Response.Redirect("index.aspx");
+                        }
+                        else
+                        {
+                            regErrorMsg.Text = "Registration unsuccessful, please try again later.";
+                        }
+                    }
+                    catch (Exception err)
+                    {
+                        regErrorMsg.Text = "Registration Error <br /> " + err.Message;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
                 }
                 else
                 {
@@ -56,7 +102,12 @@ namespace Order
                     {
                         case 1:
                             {
-                                regErrorEmail.Text += "This email was used by someone else.";
+                                regErrorEmail.Text = "This email was used by someone else.";
+                                break;
+                            }
+                        default:
+                            {
+                                regErrorEmail.Text = "";
                                 break;
                             }
                     }
@@ -64,12 +115,28 @@ namespace Order
                     {
                         case 1:
                             {
-                                regErrorUsername.Text += "This username was used by someone else.";
+                                regErrorUsername.Text = "This username was used by someone else.";
+                                break;
+                            }
+                        default:
+                            {
+                                regErrorUsername.Text = "";
                                 break;
                             }
                     }
                 }
             }
+            else
+            {
+                clearErrorMsg();
+            }
+        }
+
+        private void clearErrorMsg()
+        {
+            regErrorUsername.Text = "";
+            regErrorEmail.Text = "";
+            regErrorMsg.Text = "";
         }
     }
 }
