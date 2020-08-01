@@ -20,6 +20,8 @@ namespace Order
 
         protected void submitReg_Click(object sender, EventArgs e)
         {
+            Encryption pwEncryption = new Encryption();
+
             string username = regUsername.Text;
             string email = regEmail.Text;
             string password = regPassword.Text;
@@ -58,7 +60,7 @@ namespace Order
                     insertSQL += name + "', '";
                     insertSQL += phone + "', '";
                     insertSQL += email + "', '";
-                    insertSQL += password + "', '";
+                    insertSQL += pwEncryption.Encrypt(password) + "', '";
                     insertSQL += role + "', '";
                     insertSQL += username + "')";
 

@@ -21,6 +21,8 @@ namespace Order
 
         protected void submitLogin_Click(object sender, EventArgs e)
         {
+            Encryption pwEncryption = new Encryption();
+
             if (reqLoginEmail.IsValid && reqLoginPassword.IsValid)
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["userConn"].ToString());
@@ -40,7 +42,7 @@ namespace Order
                     con.Open();
                     string checkPasswordQuery = "select MemberPassword from Members where MemberEmail='"+userEmail+"'";
                     SqlCommand cmdPassword = new SqlCommand(checkPasswordQuery, con);
-                    string dbPassword = cmdPassword.ExecuteScalar().ToString().Replace(" ", "");
+                    string dbPassword = cmdPassword.ExecuteScalar().ToString();
 
                     string MemberIdQuery = "select MemberId from Members where MemberEmail='" + userEmail + "'";
                     SqlCommand cmdMemberId = new SqlCommand(MemberIdQuery, con);
@@ -58,7 +60,7 @@ namespace Order
                     {
                         if (dbPassword != "" && dbMemberId != "" && dbMemberUsername != "" && dbRole != "")
                         {
-                            if (dbPassword == userPassword)
+                            if (dbPassword == pwEncryption.Encrypt(userPassword))
                             {
                                 Session["MemberEmail"] = userEmail;
                                 Session["MemberId"] = dbMemberId;
