@@ -33,6 +33,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqRegUsername;
 
         /// <summary>
+        /// regErrorUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label regErrorUsername;
+
+        /// <summary>
         /// regEmail control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqRegEmail;
+
+        /// <summary>
+        /// regErrorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label regErrorEmail;
 
         /// <summary>
         /// regPassword control.

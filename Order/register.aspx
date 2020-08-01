@@ -4,11 +4,13 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     Username:<asp:TextBox ID="regUsername" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegUsername" runat="server" ErrorMessage="Username is required" ControlToValidate="regUsername" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:Label ID="regErrorUsername" runat="server" Text="" ForeColor="Red"></asp:Label>
     
     <br />
     
     Email:<asp:TextBox ID="regEmail" runat="server" TextMode="Email"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegEmail" runat="server" ErrorMessage="Email is required" ControlToValidate="regEmail" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:Label ID="regErrorEmail" runat="server" Text="" ForeColor="Red"></asp:Label>
     
     <br />
     
