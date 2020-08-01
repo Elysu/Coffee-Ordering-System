@@ -15,7 +15,10 @@ namespace Order
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["MemberEmail"] != null)
+            {
+                Response.Redirect("Logout.aspx");
+            }
         }
 
         protected void submitReg_Click(object sender, EventArgs e)
@@ -59,10 +62,10 @@ namespace Order
                     insertSQL += "VALUES ('";
                     insertSQL += name + "', '";
                     insertSQL += phone + "', '";
-                    insertSQL += email + "', '";
+                    insertSQL += email.ToLower() + "', '";
                     insertSQL += pwEncryption.Encrypt(password) + "', '";
                     insertSQL += role + "', '";
-                    insertSQL += username + "')";
+                    insertSQL += username.ToLower() + "')";
 
                     SqlCommand cmdInsertSQL = new SqlCommand(insertSQL, con);
 
