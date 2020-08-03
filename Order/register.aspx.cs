@@ -35,6 +35,7 @@ namespace Order
             if (reqRegUsername.IsValid &&
                 reqRegEmail.IsValid &&
                 reqRegPassword.IsValid &&
+                regRegPassword.IsValid &&
                 reqRegConfirmPassword.IsValid &&
                 compareRegConfirmPassword.IsValid &&
                 reqRegName.IsValid &&

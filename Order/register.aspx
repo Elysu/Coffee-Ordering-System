@@ -16,6 +16,7 @@
     
     Password:<asp:TextBox ID="regPassword" runat="server" TextMode="Password"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegPassword" runat="server" ErrorMessage="Password is required" ControlToValidate="regPassword" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="regRegPassword" runat="server" ControlToValidate="regPassword" ErrorMessage="Minimum password length is 8" ValidationExpression=".{8}.*" EnableClientScript="False" ForeColor="Red"/>
     
     <br />
 

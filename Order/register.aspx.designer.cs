@@ -87,6 +87,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqRegPassword;
 
         /// <summary>
+        /// regRegPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regRegPassword;
+
+        /// <summary>
         /// regConfirmPassword control.
         /// </summary>
         /// <remarks>
