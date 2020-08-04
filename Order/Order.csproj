@@ -109,6 +109,7 @@
     <Content Include="Login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="menu.aspx" />
+    <Content Include="OrderConfirm.aspx" />
     <Content Include="OrderTest.aspx" />
     <Content Include="register.aspx" />
     <Content Include="Web.config" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderConfirm.aspx.cs">
+      <DependentUpon>OrderConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderConfirm.aspx.designer.cs">
+      <DependentUpon>OrderConfirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderTest.aspx.cs">
       <DependentUpon>OrderTest.aspx</DependentUpon>

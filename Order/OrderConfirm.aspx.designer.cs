@@ -11,79 +11,88 @@ namespace Order
 {
 
 
-    public partial class OrderTest
+    public partial class OrderConfirm
     {
 
         /// <summary>
-        /// coffeeType control.
+        /// output control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList coffeeType;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl output;
 
         /// <summary>
-        /// quantity control.
+        /// image control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox quantity;
+        protected global::System.Web.UI.WebControls.Image image;
 
         /// <summary>
-        /// requiredQuantity control.
+        /// outputCoffee control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredQuantity;
+        protected global::System.Web.UI.WebControls.Label outputCoffee;
 
         /// <summary>
-        /// rangeQuantity control.
+        /// outputQuantity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator rangeQuantity;
+        protected global::System.Web.UI.WebControls.Label outputQuantity;
 
         /// <summary>
-        /// topping control.
+        /// outputTopping control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList topping;
+        protected global::System.Web.UI.WebControls.Label outputTopping;
 
         /// <summary>
-        /// requiredTopping control.
+        /// outputAddOns control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTopping;
+        protected global::System.Web.UI.WebControls.Label outputAddOns;
 
         /// <summary>
-        /// addOns control.
+        /// outputTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList addOns;
+        protected global::System.Web.UI.WebControls.Label outputTotal;
 
         /// <summary>
-        /// submit control.
+        /// submitConfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit;
+        protected global::System.Web.UI.WebControls.Button submitConfirm;
+
+        /// <summary>
+        /// orderErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label orderErrorMsg;
     }
 }

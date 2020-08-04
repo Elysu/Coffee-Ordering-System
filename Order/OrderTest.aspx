@@ -47,32 +47,4 @@
 
             <asp:Button ID="submit" runat="server" Text="Submit Order" OnClick="submit_Click" />
         </div>
-
-    <div id="output" runat="server" visible="false">
-        ORDER DETAILS: 
-        <br />
-        <br />
-
-        <asp:Image ID="image" runat="server" Width="400px" Height="300px" />
-        <br />
-        <br />
-
-        Coffee: 
-        <asp:Label ID="outputCoffee" runat="server"></asp:Label>
-        <br />
-        Quantity: 
-        <asp:Label ID="outputQuantity" runat="server"></asp:Label>
-        <br />
-
-        Topping: 
-        <asp:Label ID="outputTopping" runat="server"></asp:Label>
-        <br />
-
-        Decoration: 
-        <asp:Label ID="outputAddOns" runat="server"></asp:Label>
-        <br />
-
-        Total Price: 
-        <asp:Label ID="outputTotal" runat="server"></asp:Label>
-    </div>
 </asp:Content>

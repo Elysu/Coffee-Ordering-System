@@ -63,7 +63,7 @@ namespace Order
                             if (dbPassword == pwEncryption.Encrypt(userPassword))
                             {
                                 Session["MemberEmail"] = userEmail;
-                                Session["MemberId"] = dbMemberId;
+                                Session["MemberId"] = dbMemberId.ToString();
                                 Session["MemberUsername"] = dbMemberUsername;
                                 Session["MemberRole"] = dbRole;
                                 Response.Redirect("index.aspx");

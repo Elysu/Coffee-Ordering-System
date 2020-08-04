@@ -83,7 +83,7 @@ namespace Order
                             string MemberId = cmdMemberId.ExecuteScalar().ToString();
 
                             Session["MemberEmail"] = email;
-                            Session["MemberId"] = MemberId;
+                            Session["MemberId"] = MemberId.ToString();
                             Session["MemberUsername"] = username;
                             Session["MemberRole"] = role;
                             Response.Redirect("index.aspx");
