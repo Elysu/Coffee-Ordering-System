@@ -28,8 +28,8 @@ namespace Order
 
             if (Session["MemberEmail"] != null)
             {
-                btnLoginSwitch.InnerHtml = "<a runat='server' id='displayName'>" + Session["MemberUsername"].ToString() + "</a>" +
-                    "<a runat='server' href='logout.aspx' id='logoutButton'>Logout</a>";
+                btnLoginSwitch.InnerHtml = "<a runat='server' id='displayName'>" + Session["MemberUsername"].ToString() + "</a>";
+                btnLoginSwitch.InnerHtml += "<a runat='server' href='logout.aspx' id='logoutButton'>Logout</a>";
             }
             else
             {

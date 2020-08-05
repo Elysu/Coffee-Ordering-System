@@ -112,6 +112,7 @@
     <Content Include="OrderConfirm.aspx" />
     <Content Include="OrderTest.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="UserOrder.aspx" />
     <Content Include="Web.config" />
     <Content Include="OrderForm.aspx" />
   </ItemGroup>
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserOrder.aspx.cs">
+      <DependentUpon>UserOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserOrder.aspx.designer.cs">
+      <DependentUpon>UserOrder.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

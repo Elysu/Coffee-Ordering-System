@@ -612,7 +612,7 @@ ol li:before {
   -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(174,174,174);
 }
 .tm-product {
