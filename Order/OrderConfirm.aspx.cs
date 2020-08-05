@@ -77,6 +77,7 @@ namespace Order
                 if (added > 0)
                 {
                     output.InnerHtml = "<label id='orderSucess'>Your order has been confirmed, thank you.</label>";
+                    output.InnerHtml += "<p><a href='index.aspx'>Back to Home</a></p>";
                 }
                 else
                 {
