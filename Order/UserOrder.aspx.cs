@@ -61,12 +61,12 @@ namespace Order
                 orderTable.InnerHtml += "<div class='tm-product'>" +
                                             "<img src='" + img + "' alt='Product' width='136' height='136'>" +
                                             "<div class='tm-product-text'>" +
+                                                "<asp:LinkButton ID='orderLinkButton' OnClick='sendOrderID' CommandArgument='"+reader["OrderId"]+"' runat='server'>LinkButton</asp:LinkButton>" +
                                                 "<h3 class='tm-product-title'>" + reader["Flavor"].ToString() + "</h3>" +
                                                 "<p class='tm-product-description'>Order ID: " + reader["OrderId"].ToString() + "</p>" +
                                                 "<p class='tm-product-description'>Quantity: " + reader["Quantity"].ToString() + "</p>" +
                                                 "<p class='tm-product-description'>Toppings: " + reader["Topping"].ToString() + "</p>" +
                                                 "<p class='tm-product-description'>Add Ons: " + reader["AddOns"].ToString() + "</p>" +
-                                                "<a href=''></a>" +
                                             "</div>" +
                                             "<div class='tm-product-price'>" +
                                                 "<a href = '#' class='tm-product-price-link tm-handwriting-font'>$" + reader["TotalPrice"].ToString() + "</a>" +
@@ -77,6 +77,14 @@ namespace Order
             con.Close();
 
 
+        }
+
+        protected void sendOrderID(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)(sender);
+            string orderId = btn.CommandArgument;
+            Global.OrderId = orderId;
+            Response.Redirect("UserOrderEdit.aspx");
         }
     }
 }

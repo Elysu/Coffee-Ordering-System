@@ -113,6 +113,7 @@
     <Content Include="OrderTest.aspx" />
     <Content Include="register.aspx" />
     <Content Include="UserOrder.aspx" />
+    <Content Include="UserOrderEdit.aspx" />
     <Content Include="Web.config" />
     <Content Include="OrderForm.aspx" />
   </ItemGroup>
@@ -125,6 +126,7 @@
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +197,13 @@
     </Compile>
     <Compile Include="UserOrder.aspx.designer.cs">
       <DependentUpon>UserOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserOrderEdit.aspx.cs">
+      <DependentUpon>UserOrderEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserOrderEdit.aspx.designer.cs">
+      <DependentUpon>UserOrderEdit.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
