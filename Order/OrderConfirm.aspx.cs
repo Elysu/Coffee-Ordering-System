@@ -12,6 +12,7 @@ namespace Order
     public partial class OrderConfirm : System.Web.UI.Page
     {
         string sCoffeeType, sQuantity, sTopping, sAddOns;
+        int BrownSugar, WhiteSugar, Salt, Creamer, Stirrer;
         double totalPrice;
         private string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
 
@@ -21,6 +22,11 @@ namespace Order
             sQuantity = Session["Quantity"].ToString();
             sTopping = Session["Topping"].ToString();
             sAddOns = Session["AddOns"].ToString();
+            BrownSugar = Convert.ToInt32(Session["BrownSugar"].ToString());
+            WhiteSugar = Convert.ToInt32(Session["WhiteSugar"].ToString());
+            Salt = Convert.ToInt32(Session["Salt"].ToString());
+            Creamer = Convert.ToInt32(Session["Creamer"].ToString());
+            Stirrer = Convert.ToInt32(Session["Stirrer"].ToString());
             totalPrice = Convert.ToDouble(Session["TotalPrice"].ToString());
 
             //coffee types
@@ -57,13 +63,17 @@ namespace Order
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
-            string insertData = "INSERT INTO Orders (MemberId, Flavor, Quantity, Topping, AddOns, TotalPrice)";
+            string insertData = "INSERT INTO Orders (MemberId, Flavor, Quantity, Topping, BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, TotalPrice)";
             insertData += "VALUES ('";
             insertData += Session["MemberId"].ToString() + "', '";
             insertData += sCoffeeType + "', '";
             insertData += Convert.ToInt32(sQuantity) + "', '";
             insertData += sTopping + "', '";
-            insertData += sAddOns + "', '";
+            insertData += BrownSugar + "', '";
+            insertData += WhiteSugar + "', '";
+            insertData += Salt + "', '";
+            insertData += Creamer + "', '";
+            insertData += Stirrer + "', '";
             insertData += totalPrice + "')";
 
             SqlCommand cmdInsertData = new SqlCommand(insertData, con);

@@ -58,6 +58,53 @@ namespace Order
                         break;
                 }
 
+                string[] addOnsArray = {reader["BrownSugar"].ToString(), reader["WhiteSugar"].ToString(), reader["Salt"].ToString(), reader["Creamer"].ToString(), reader["Stirrer"].ToString()};
+                string addOns = "";
+
+                //loop for Add-Ons
+                int index = 1;
+                int count = 0;
+
+                for (int i = 0; i < addOnsArray.Length; i++)
+                {
+                    if (addOnsArray[i] == "1")
+                    {
+                        count++;
+                    }
+                }
+
+                for (int i = 0; i < addOnsArray.Length; i++)
+                {
+                    if (addOnsArray[i] == "1")
+                    {
+                        switch (i)
+                        {
+                            case 0:
+                                addOns += "Brown Sugar";
+                                break;
+                            case 1:
+                                addOns += "White Sugar";
+                                break;
+                            case 2:
+                                addOns += "Salt";
+                                break;
+                            case 3:
+                                addOns += "Creamer";
+                                break;
+                            case 4:
+                                addOns += "Stirrer";
+                                break;
+                        }
+
+                        if (index >= 1 && index != count)
+                        {
+                            addOns += ", ";
+                        }
+
+                        index++;
+                    }
+                }
+
                 orderTable.InnerHtml += "<div class='tm-product'>" +
                                             "<img src='" + img + "' alt='Product' width='136' height='136'>" +
                                             "<div class='tm-product-text'>" +
@@ -66,7 +113,7 @@ namespace Order
                                                 "<p class='tm-product-description'>Order ID: " + reader["OrderId"].ToString() + "</p>" +
                                                 "<p class='tm-product-description'>Quantity: " + reader["Quantity"].ToString() + "</p>" +
                                                 "<p class='tm-product-description'>Toppings: " + reader["Topping"].ToString() + "</p>" +
-                                                "<p class='tm-product-description'>Add Ons: " + reader["AddOns"].ToString() + "</p>" +
+                                                "<p class='tm-product-description'>Add Ons: " + addOns + "</p>" +
                                             "</div>" +
                                             "<div class='tm-product-price'>" +
                                                 "<a href = '#' class='tm-product-price-link tm-handwriting-font'>$" + reader["TotalPrice"].ToString() + "</a>" +
@@ -75,8 +122,6 @@ namespace Order
             }
 
             con.Close();
-
-
         }
 
         protected void sendOrderID(object sender, EventArgs e)

@@ -11,7 +11,7 @@ namespace Order
 {
 
 
-    public partial class UserOrder
+    public partial class UserOrderRepeater
     {
 
         /// <summary>

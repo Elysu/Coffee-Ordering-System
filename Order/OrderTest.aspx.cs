@@ -10,7 +10,7 @@ namespace Order
     public partial class OrderTest : System.Web.UI.Page
     {
         string sCoffeeType, sQuantity, sTopping, sAddOns;
-        int count, index;
+        int count, index, BrownSugar = 0, WhiteSugar = 0, Salt = 0, Creamer = 0, Stirrer = 0;
         double priceAddOns, priceCoffeeType, priceTopping, priceQuantity, totalPrice;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -41,6 +41,25 @@ namespace Order
                     {
                         priceAddOns += Convert.ToDouble(addOns.Items[i].Value);
                         count++;
+
+                        switch (i)
+                        {
+                            case 0:
+                                BrownSugar = 1;
+                                break;
+                            case 1:
+                                WhiteSugar = 1;
+                                break;
+                            case 2:
+                                Salt = 1;
+                                break;
+                            case 3:
+                                Creamer = 1;
+                                break;
+                            case 4:
+                                Stirrer = 1;
+                                break;
+                        }
                     }
                 }
 
@@ -73,8 +92,12 @@ namespace Order
                 Session["Quantity"] = sQuantity;
                 Session["Topping"] = sTopping;
                 Session["AddOns"] = sAddOns;
+                Session["BrownSugar"] = BrownSugar;
+                Session["WhiteSugar"] = WhiteSugar;
+                Session["Salt"] = Salt;
+                Session["Creamer"] = Creamer;
+                Session["Stirrer"] = Stirrer;
                 Session["TotalPrice"] = totalPrice.ToString();
-
                 Server.Transfer("OrderConfirm.aspx");
             }
         }
