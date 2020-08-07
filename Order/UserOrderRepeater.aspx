@@ -8,8 +8,11 @@
 
                 <div class='tm-product'>
                         <asp:Image ID="coffeeImage" ImageUrl='<%# GetImage(Eval("Flavor").ToString()) %>' runat="server" Width="136px" Height="136px"/>
+                        
                         <div class='tm-product-text'>
-                            <h3 class="tm-product-title"><%# Eval("Flavor") %></h3>
+                            <asp:LinkButton ID="orderLinkButton" runat="server" CommandArgument='<%# Eval("OrderId").ToString() %>' OnClick="sendOrderID">
+                                <h3 class="tm-product-title"><%# Eval("Flavor") %></h3>
+                            </asp:LinkButton>
                             <p class='tm-product-description'>Order ID: <%# Eval("OrderId") %></p>
                             <p class='tm-product-description'>Quantity: <%# Eval("Quantity") %></p>
                             <p class='tm-product-description'>Toppings: <%# Eval("Topping") %></p>

@@ -123,5 +123,13 @@ namespace Order
 
             return path;
         }
+
+        protected void sendOrderID(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)(sender);
+            string orderId = btn.CommandArgument;
+            Global.OrderId = orderId;
+            Response.Redirect("UserOrderEdit.aspx");
+        }
     }
 }
