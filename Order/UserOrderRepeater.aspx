@@ -7,7 +7,7 @@
             <ItemTemplate>
 
                 <div class='tm-product'>
-                        <asp:Image ID="coffeeImage" ImageUrl="<%# GetImage(Eval("Flavor").ToString()) %>" runat="server" Width="136px" Height="136px"/>
+                        <asp:Image ID="coffeeImage" ImageUrl='<%# GetImage(Eval("Flavor").ToString()) %>' runat="server" Width="136px" Height="136px"/>
                         <div class='tm-product-text'>
                             <h3 class="tm-product-title"><%# Eval("Flavor") %></h3>
                             <p class='tm-product-description'>Order ID: <%# Eval("OrderId") %></p>
