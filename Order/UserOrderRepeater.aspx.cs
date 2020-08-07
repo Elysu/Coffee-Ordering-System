@@ -39,5 +39,89 @@ namespace Order
                 return ds;
             }
         }
+
+        public string AddOns(string BrownSugar, string WhiteSugar, string Salt, string Creamer, string Stirrer)
+        {
+            string addOns = "";
+            string[] addOnsArray = { BrownSugar, WhiteSugar, Salt, Creamer, Stirrer };
+
+            //loop for Add-Ons
+            int index = 1;
+            int count = 0;
+
+            for (int i = 0; i < addOnsArray.Length; i++)
+            {
+                if (addOnsArray[i] == "1")
+                {
+                    count++;
+                }
+            }
+
+            for (int i = 0; i < addOnsArray.Length; i++)
+            {
+                if (addOnsArray[i] == "1")
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            addOns += "Brown Sugar";
+                            break;
+                        case 1:
+                            addOns += "White Sugar";
+                            break;
+                        case 2:
+                            addOns += "Salt";
+                            break;
+                        case 3:
+                            addOns += "Creamer";
+                            break;
+                        case 4:
+                            addOns += "Stirrer";
+                            break;
+                    }
+
+                    if (index >= 1 && index != count)
+                    {
+                        addOns += ", ";
+                    }
+
+                    index++;
+                }
+            }
+
+            return addOns;
+        }
+
+        public string GetImage(string coffee)
+        {
+            string path = "";
+
+            switch (coffee)
+            {
+                case "Classic Cappuccino":
+                    path = "images/cappuccino/cappuccino.jpg";
+                    break;
+                case "Iced Cappuccino":
+                    path = "images/cappuccino/iced cappuccino.jpg";
+                    break;
+                case "Classic Americano":
+                    path = "images/americano/americano.jpg";
+                    break;
+                case "Classic Latte":
+                    path = "images/latte/latte.jpg";
+                    break;
+                case "Vanilla Latte":
+                    path = "images/latte/vanilla latte.jpg";
+                    break;
+                case "Caramel Latte":
+                    path = "images/latte/caramel latte.jpg";
+                    break;
+                case "Mocha Latte":
+                    path = "images/latte/mocha latte.jpg";
+                    break;
+            }
+
+            return path;
+        }
     }
 }

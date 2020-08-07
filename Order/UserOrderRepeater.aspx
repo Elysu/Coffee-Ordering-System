@@ -7,13 +7,13 @@
             <ItemTemplate>
 
                 <div class='tm-product'>
-                        <asp:Image ID="coffeeImage" ImageUrl="images/cappuccino/cappuccino.jpg" runat="server" Width="136px" Height="136px"/>
+                        <asp:Image ID="coffeeImage" ImageUrl="<%# GetImage(Eval("Flavor").ToString()) %>" runat="server" Width="136px" Height="136px"/>
                         <div class='tm-product-text'>
                             <h3 class="tm-product-title"><%# Eval("Flavor") %></h3>
                             <p class='tm-product-description'>Order ID: <%# Eval("OrderId") %></p>
                             <p class='tm-product-description'>Quantity: <%# Eval("Quantity") %></p>
                             <p class='tm-product-description'>Toppings: <%# Eval("Topping") %></p>
-                            <p id="pAddOns" class='tm-product-description'>Add Ons: </p>
+                            <p id="pAddOns" class='tm-product-description'>Add Ons: <%# AddOns(Eval("BrownSugar").ToString(), Eval("WhiteSugar").ToString(), Eval("Salt").ToString(), Eval("Creamer").ToString(), Eval("Stirrer").ToString()) %></p>
                         </div>
                         <div class='tm-product-price'>
                             <a href = '#' class='tm-product-price-link tm-handwriting-font'>$<%# Eval("TotalPrice") %></a>
