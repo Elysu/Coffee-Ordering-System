@@ -673,8 +673,12 @@ button.tm-more-button {
     margin-left: 20px;
 }
 
+#OrderRepeaterDetials {
+    width: 100%;
+}
+
 @media screen and (max-width: 991px) {
-  .tm-welcome-content { margin-bottom: 250px; }
+    .tm-welcome-content { margin-bottom: 250px; }
   .tm-main-section { padding-top: 200px; }
   .light { 
     width: 240px; 

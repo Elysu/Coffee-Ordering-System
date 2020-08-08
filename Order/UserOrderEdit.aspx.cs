@@ -18,62 +18,65 @@ namespace Order
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["MemberEmail"] == null)
+            if (!Page.IsPostBack)
             {
-                Response.Redirect("Login.aspx");
-            }
-
-            setCoffee();
-            orderId = num;
-
-            con.Open();
-
-            string orderIdQuery = "select * from Orders where OrderId='" + orderId + "'";
-            SqlCommand cmdOrderId = new SqlCommand(orderIdQuery, con);
-
-            SqlDataReader reader = cmdOrderId.ExecuteReader();
-
-            //set into order form
-            while (reader.Read())
-            {
-                lblOrderId.Text += reader["OrderId"].ToString();
-                lblCoffeeType.Text += reader["Flavor"].ToString();
-                intQuantity = Convert.ToInt32(reader["Quantity"].ToString());
-
-                sTopping = reader["Topping"].ToString();
-                switch (reader["Topping"].ToString())
+                if (Session["MemberEmail"] == null)
                 {
-                    case "Cinnamon":
-                        topping.SelectedIndex = 0;
-                        break;
-                    case "Whipped Cream":
-                        topping.SelectedIndex = 1;
-                        break;
-                    case "Nutmeg":
-                        topping.SelectedIndex = 2;
-                        break;
-                    case "None":
-                        topping.SelectedIndex = 3;
-                        break;
+                    Response.Redirect("Login.aspx");
                 }
 
-                BrownSugar = reader["BrownSugar"].ToString();
-                WhiteSugar = reader["WhiteSugar"].ToString();
-                Salt = reader["Salt"].ToString();
-                Creamer = reader["Creamer"].ToString();
-                Stirrer = reader["Stirrer"].ToString();
-            }
+                setCoffee();
+                orderId = num;
 
-            con.Close();
+                con.Open();
 
-            quantity.Text = intQuantity.ToString();
+                string orderIdQuery = "select * from Orders where OrderId='" + orderId + "'";
+                SqlCommand cmdOrderId = new SqlCommand(orderIdQuery, con);
 
-            string[] arrayAddOns = { BrownSugar, WhiteSugar, Salt, Creamer, Stirrer };
-            for (int i = 0; i < arrayAddOns.Length; i++)
-            {
-                if (arrayAddOns[i] == "1")
+                SqlDataReader reader = cmdOrderId.ExecuteReader();
+
+                //set into order form
+                while (reader.Read())
                 {
-                    addOns.Items[i].Selected = true;
+                    lblOrderId.Text += reader["OrderId"].ToString();
+                    lblCoffeeType.Text += reader["Flavor"].ToString();
+                    intQuantity = Convert.ToInt32(reader["Quantity"].ToString());
+
+                    sTopping = reader["Topping"].ToString();
+                    switch (reader["Topping"].ToString())
+                    {
+                        case "Cinnamon":
+                            topping.SelectedIndex = 0;
+                            break;
+                        case "Whipped Cream":
+                            topping.SelectedIndex = 1;
+                            break;
+                        case "Nutmeg":
+                            topping.SelectedIndex = 2;
+                            break;
+                        case "None":
+                            topping.SelectedIndex = 3;
+                            break;
+                    }
+
+                    BrownSugar = reader["BrownSugar"].ToString();
+                    WhiteSugar = reader["WhiteSugar"].ToString();
+                    Salt = reader["Salt"].ToString();
+                    Creamer = reader["Creamer"].ToString();
+                    Stirrer = reader["Stirrer"].ToString();
+                }
+
+                con.Close();
+
+                quantity.Text = intQuantity.ToString();
+
+                string[] arrayAddOns = { BrownSugar, WhiteSugar, Salt, Creamer, Stirrer };
+                for (int i = 0; i < arrayAddOns.Length; i++)
+                {
+                    if (arrayAddOns[i] == "1")
+                    {
+                        addOns.Items[i].Selected = true;
+                    }
                 }
             }
         }
@@ -84,7 +87,7 @@ namespace Order
             orderId = num;
 
             string editQuantity = quantity.Text != null ? quantity.Text : "";
-            string editTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : ""; ;
+            string editTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : "";
             string editAddOns = "";
             int editBrownSugar = 0, editWhiteSugar = 0, editSalt = 0, editCreamer = 0, editStirrer = 0;
 
