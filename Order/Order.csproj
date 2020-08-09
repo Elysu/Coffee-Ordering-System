@@ -76,6 +76,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\templatemo-style.css" />
+    <Content Include="Error404.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\1.jpg" />
     <Content Include="img\favicon.ico" />
@@ -136,6 +137,13 @@
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Encryption.cs" />
+    <Compile Include="Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
