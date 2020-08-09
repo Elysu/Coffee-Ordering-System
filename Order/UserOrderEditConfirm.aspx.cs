@@ -13,16 +13,14 @@ namespace Order
     {
         private string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
 
-        string editFlavor, editQuantity, editTopping, editAddOns;
-        int num, orderId, editBrownSugar, editWhiteSugar, editSalt, editCreamer, editStirrer;
-        double totalPrice;
+        string editFlavor, editTopping, editAddOns;
+        int num, orderId, editBrownSugar, editWhiteSugar, editSalt, editCreamer, editStirrer, editQuantity;
+        double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
                 editFlavor = Session["editFlavor"].ToString();
-                editQuantity = Session["editQuantity"].ToString();
+                editQuantity = Convert.ToInt32(Session["editQuantity"].ToString());
                 editTopping = Session["editTopping"].ToString();
                 editAddOns = Session["editAddOns"].ToString();
                 editBrownSugar = Convert.ToInt32(Session["editBrownSugar"].ToString());
@@ -59,24 +57,25 @@ namespace Order
                 }
 
                 outputs();
-            }
+            
         }
 
         protected void submitConfirm_Click(object sender, EventArgs e)
         {
             setCoffee();
-            num = orderId;
+            orderId = num;
 
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
-            string updateQuery = "UPDATE Orders SET Quantity=" + Convert.ToInt32(editQuantity) + ", ";
+            string updateQuery = "UPDATE Orders SET Quantity=" + editQuantity + ", ";
             updateQuery += "Topping='" + editTopping + "', ";
             updateQuery += "BrownSugar=" + editBrownSugar + ", ";
             updateQuery += "WhiteSugar=" + editWhiteSugar + ", ";
             updateQuery += "Salt=" + editSalt + ", ";
             updateQuery += "Creamer=" + editCreamer + ", ";
-            updateQuery += "Stirrer=" + editStirrer + " ";
+            updateQuery += "Stirrer=" + editStirrer + ", ";
+            updateQuery += "TotalPrice=" + totalPrice + " ";
             updateQuery += "WHERE OrderId=" + orderId;
 
             SqlCommand cmdUpdate = new SqlCommand(updateQuery, con);
@@ -89,7 +88,7 @@ namespace Order
                 //check if record was successfully inserted
                 if (added > 0)
                 {
-                    output.InnerHtml = "<label id='orderSucess'>Your order has been updated.</label>";
+                    output.InnerHtml = "<label id='OrderEditSuccess'>Your order has been updated.</label>";
                     output.InnerHtml += "<p><a href='userorderrepeater.aspx'>Back to My Orders</a></p>";
                     output.InnerHtml += "<p><a href='index.aspx'>Home</a></p>";
                 }
@@ -117,7 +116,7 @@ namespace Order
         private void outputs()
         {
             outputCoffee.Text = editFlavor;
-            outputQuantity.Text = editQuantity;
+            outputQuantity.Text = editQuantity.ToString();
             outputTopping.Text = editTopping;
             outputAddOns.Text = editAddOns != "" ? editAddOns : "None";
             outputTotal.Text = "RM " + String.Format("{0:0.00}", totalPrice);

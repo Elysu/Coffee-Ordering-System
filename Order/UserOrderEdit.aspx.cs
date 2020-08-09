@@ -12,7 +12,7 @@ namespace Order
     public partial class UserOrderEdit : System.Web.UI.Page
     {
         private static string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
-        string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping, sFlavor;
+        string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping, sFlavor = "";
         int num, orderId, intQuantity;
         SqlConnection con = new SqlConnection(connectionString);
 
@@ -44,7 +44,7 @@ namespace Order
                     intQuantity = Convert.ToInt32(reader["Quantity"].ToString());
 
                     sTopping = reader["Topping"].ToString();
-                    switch (reader["Topping"].ToString())
+                    switch (sTopping)
                     {
                         case "Cinnamon":
                             topping.SelectedIndex = 0;
@@ -90,12 +90,19 @@ namespace Order
                 setCoffee();
                 orderId = num;
 
+                con.Open();
+                string flavorQuery = "select Flavor from Orders where OrderId='" + orderId + "'";
+                SqlCommand cmdFlavor = new SqlCommand(flavorQuery, con);
+
+                string editFlavor = cmdFlavor.ExecuteScalar().ToString();
                 string editQuantity = quantity.Text != null ? quantity.Text : "";
                 string editTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : "";
                 string editAddOns = "";
                 int editBrownSugar = 0, editWhiteSugar = 0, editSalt = 0, editCreamer = 0, editStirrer = 0;
 
-                //loop for Add-Ons price and determine Add Ons selected or nah
+                con.Close();
+
+                //loop for Add-Ons price and determine Add Ons selected or not
                 int count = 0;
                 double priceAddOns = 0.00;
 
@@ -146,7 +153,8 @@ namespace Order
 
                 //calculate total price
                 double priceCoffeeType = 0.00, priceTopping, priceQuantity, totalPrice;
-                switch (sFlavor)
+
+                switch (editFlavor)
                 {
                     case "Classic Americano":
                         priceCoffeeType = 5.00;
@@ -171,13 +179,13 @@ namespace Order
                         break;
                 }
 
-                priceTopping = sTopping != "" ? Convert.ToDouble(topping.SelectedValue) : 0.0;
-                priceQuantity = intQuantity != null ? Convert.ToDouble(intQuantity) : 0.0;
+                priceTopping = editTopping != "" ? Convert.ToDouble(topping.SelectedValue) : 0.0;
+                priceQuantity = editQuantity != "" ? Convert.ToDouble(editQuantity) : 0.0;
 
                 //(flavor+topping+(decocations)) * quantity
                 totalPrice = (priceCoffeeType + priceTopping + priceAddOns) * priceQuantity;
 
-                Session["editFlavor"] = sFlavor;
+                Session["editFlavor"] = editFlavor;
                 Session["editQuantity"] = editQuantity;
                 Session["editTopping"] = editTopping;
                 Session["editAddOns"] = editAddOns;
@@ -186,7 +194,7 @@ namespace Order
                 Session["editSalt"] = editSalt;
                 Session["editCreamer"] = editCreamer;
                 Session["editStirrer"] = editStirrer;
-                Session["editTotalPrice"] = totalPrice;
+                Session["editTotalPrice"] = totalPrice.ToString();
                 Server.Transfer("UserOrderEditConfirm.aspx");
             }
         }

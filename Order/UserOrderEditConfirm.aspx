@@ -34,7 +34,7 @@
 
         <br />
 
-        <asp:Button ID="submitConfirm" runat="server" Text="Confirm" OnClick="submitConfirm_Click"/>
+        <asp:Button ID="submitEditConfirm" runat="server" Text="Confirm" OnClick="submitConfirm_Click"/>
 
         <br />
 

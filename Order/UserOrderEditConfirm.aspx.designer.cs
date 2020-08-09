@@ -78,13 +78,13 @@ namespace Order
         protected global::System.Web.UI.WebControls.Label outputTotal;
 
         /// <summary>
-        /// submitConfirm control.
+        /// submitEditConfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submitConfirm;
+        protected global::System.Web.UI.WebControls.Button submitEditConfirm;
 
         /// <summary>
         /// orderUpdateErrorMsg control.
