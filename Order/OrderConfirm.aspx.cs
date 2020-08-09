@@ -63,7 +63,7 @@ namespace Order
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
 
-            string insertData = "INSERT INTO Orders (MemberId, Flavor, Quantity, Topping, BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, TotalPrice)";
+            string insertData = "INSERT INTO Orders (MemberId, Flavor, Quantity, Topping, BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, TotalPrice, Status)";
             insertData += "VALUES ('";
             insertData += Session["MemberId"].ToString() + "', '";
             insertData += sCoffeeType + "', '";
@@ -74,7 +74,8 @@ namespace Order
             insertData += Salt + "', '";
             insertData += Creamer + "', '";
             insertData += Stirrer + "', '";
-            insertData += totalPrice + "')";
+            insertData += totalPrice + "', ";
+            insertData += "'Pending')";
 
             SqlCommand cmdInsertData = new SqlCommand(insertData, con);
             int added = 0;

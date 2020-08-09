@@ -12,7 +12,7 @@ namespace Order
     public partial class UserOrderEdit : System.Web.UI.Page
     {
         private static string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
-        string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping, sFlavor = "";
+        string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping, sFlavor = "", status;
         int num, orderId, intQuantity;
         SqlConnection con = new SqlConnection(connectionString);
 
@@ -38,6 +38,7 @@ namespace Order
                 //set into order form
                 while (reader.Read())
                 {
+                    status = reader["Status"].ToString();
                     sFlavor = reader["Flavor"].ToString();
 
                     lblOrderId.Text += reader["OrderId"].ToString();
@@ -69,6 +70,7 @@ namespace Order
 
                 con.Close();
 
+                lblStatus.Text += status;
                 lblCoffeeType.Text += sFlavor;
                 quantity.Text = intQuantity.ToString();
 
@@ -79,6 +81,17 @@ namespace Order
                     {
                         addOns.Items[i].Selected = true;
                     }
+                }
+
+                if (status == "Confirmed")
+                {
+                    quantity.ReadOnly = true;
+                    topping.Enabled = false;
+                    addOns.Enabled = false;
+                    submit.Enabled = false;
+                    submit.Visible = false;
+                    lblMsg.Text = "Your order cannot be edited as it has already been confirmed.";
+                    lblMsg.Visible = true;
                 }
             }
         }

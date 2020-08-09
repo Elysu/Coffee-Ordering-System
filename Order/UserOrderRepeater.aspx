@@ -13,6 +13,7 @@
                                 <h3 class="tm-product-title"><%# Eval("Flavor") %></h3>
                             </asp:LinkButton>
                             <p class='tm-product-description'>Order ID: <%# Eval("OrderId") %></p>
+                            <p class='tm-product-description'>Status: <%# Eval("Status") %></p>
                             <p class='tm-product-description'>Quantity: <%# Eval("Quantity") %></p>
                             <p class='tm-product-description'>Toppings: <%# Eval("Topping") %></p>
                             <p id="pAddOns" class='tm-product-description'>Add Ons: <%# AddOns(Eval("BrownSugar").ToString(), Eval("WhiteSugar").ToString(), Eval("Salt").ToString(), Eval("Creamer").ToString(), Eval("Stirrer").ToString()) %></p>

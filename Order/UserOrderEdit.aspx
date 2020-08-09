@@ -3,7 +3,15 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="divOutput" runat="server">
+        <asp:Label runat="server" Text="" ID="lblMsg" Visible="false"></asp:Label>
+
+        <br />
+
         <asp:Label runat="server" Text="Order ID: " ID="lblOrderId"></asp:Label>
+
+        <br />
+
+        <asp:Label runat="server" Text="Status: " ID="lblStatus"></asp:Label>
 
         <br />
 

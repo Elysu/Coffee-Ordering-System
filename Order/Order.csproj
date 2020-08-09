@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminUserOrder.aspx" />
     <Content Include="App_Data\Database.mdf" />
     <Content Include="App_Data\Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
@@ -120,6 +121,13 @@
     <Content Include="OrderForm.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUserOrder.aspx.cs">
+      <DependentUpon>AdminUserOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUserOrder.aspx.designer.cs">
+      <DependentUpon>AdminUserOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
