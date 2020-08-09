@@ -114,6 +114,7 @@
     <Content Include="register.aspx" />
     <Content Include="UserOrder.aspx" />
     <Content Include="UserOrderEdit.aspx" />
+    <Content Include="UserOrderEditConfirm.aspx" />
     <Content Include="UserOrderRepeater.aspx" />
     <Content Include="Web.config" />
     <Content Include="OrderForm.aspx" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="UserOrderEdit.aspx.designer.cs">
       <DependentUpon>UserOrderEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserOrderEditConfirm.aspx.cs">
+      <DependentUpon>UserOrderEditConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserOrderEditConfirm.aspx.designer.cs">
+      <DependentUpon>UserOrderEditConfirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserOrderRepeater.aspx.cs">
       <DependentUpon>UserOrderRepeater.aspx</DependentUpon>

@@ -24,9 +24,7 @@ namespace Order
 
         protected void logoutConfirm_Click(object sender, EventArgs e)
         {
-            Session["MemberEmail"] = null;
-            Session["MemberId"] = null;
-            Session["MemberRole"] = null;
+            Session.Clear();
             Response.Redirect("index.aspx");
         }
     }

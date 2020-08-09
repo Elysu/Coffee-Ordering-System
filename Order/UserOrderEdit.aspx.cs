@@ -12,7 +12,7 @@ namespace Order
     public partial class UserOrderEdit : System.Web.UI.Page
     {
         private static string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
-        string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping;
+        string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping, sFlavor;
         int num, orderId, intQuantity;
         SqlConnection con = new SqlConnection(connectionString);
 
@@ -38,8 +38,9 @@ namespace Order
                 //set into order form
                 while (reader.Read())
                 {
+                    sFlavor = reader["Flavor"].ToString();
+
                     lblOrderId.Text += reader["OrderId"].ToString();
-                    lblCoffeeType.Text += reader["Flavor"].ToString();
                     intQuantity = Convert.ToInt32(reader["Quantity"].ToString());
 
                     sTopping = reader["Topping"].ToString();
@@ -68,6 +69,7 @@ namespace Order
 
                 con.Close();
 
+                lblCoffeeType.Text += sFlavor;
                 quantity.Text = intQuantity.ToString();
 
                 string[] arrayAddOns = { BrownSugar, WhiteSugar, Salt, Creamer, Stirrer };
@@ -83,98 +85,109 @@ namespace Order
 
         protected void submit_Click(object sender, EventArgs e)
         {
-            setCoffee();
-            orderId = num;
-
-            string editQuantity = quantity.Text != null ? quantity.Text : "";
-            string editTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : "";
-            string editAddOns = "";
-            int editBrownSugar = 0, editWhiteSugar = 0, editSalt = 0, editCreamer = 0, editStirrer = 0;
-
-            //loop for Add-Ons price
-            int count = 0;
-            double priceAddOns = 0.00;
-
-            for (int i = 0; i < addOns.Items.Count; i++)
+            if (requiredQuantity.IsValid && rangeQuantity.IsValid && requiredTopping.IsValid)
             {
-                if (addOns.Items[i].Selected)
-                {
-                    priceAddOns += Convert.ToDouble(addOns.Items[i].Value);
-                    count++;
+                setCoffee();
+                orderId = num;
 
-                    switch (i)
+                string editQuantity = quantity.Text != null ? quantity.Text : "";
+                string editTopping = topping.SelectedItem != null ? topping.SelectedItem.Text : "";
+                string editAddOns = "";
+                int editBrownSugar = 0, editWhiteSugar = 0, editSalt = 0, editCreamer = 0, editStirrer = 0;
+
+                //loop for Add-Ons price and determine Add Ons selected or nah
+                int count = 0;
+                double priceAddOns = 0.00;
+
+                for (int i = 0; i < addOns.Items.Count; i++)
+                {
+                    if (addOns.Items[i].Selected)
                     {
-                        case 0:
-                            editBrownSugar = 1;
-                            break;
-                        case 1:
-                            editWhiteSugar = 1;
-                            break;
-                        case 2:
-                            editSalt = 1;
-                            break;
-                        case 3:
-                            editCreamer = 1;
-                            break;
-                        case 4:
-                            editStirrer = 1;
-                            break;
+                        priceAddOns += Convert.ToDouble(addOns.Items[i].Value);
+                        count++;
+
+                        switch (i)
+                        {
+                            case 0:
+                                editBrownSugar = 1;
+                                break;
+                            case 1:
+                                editWhiteSugar = 1;
+                                break;
+                            case 2:
+                                editSalt = 1;
+                                break;
+                            case 3:
+                                editCreamer = 1;
+                                break;
+                            case 4:
+                                editStirrer = 1;
+                                break;
+                        }
                     }
                 }
-            }
 
-            int index = 1;
-            foreach (ListItem listDeco in addOns.Items)
-            {
-                if (listDeco.Selected)
+                //loop for adding coma in AddOns
+                int index = 1;
+                foreach (ListItem listDeco in addOns.Items)
                 {
-                    editAddOns += listDeco.Text;
-
-                    if (index >= 1 && index != count)
+                    if (listDeco.Selected)
                     {
-                        editAddOns += ", ";
+                        editAddOns += listDeco.Text;
+
+                        if (index >= 1 && index != count)
+                        {
+                            editAddOns += ", ";
+                        }
+
+                        index++;
                     }
-
-                    index++;
                 }
-            }
 
-            string updateQuery = "UPDATE Orders SET Quantity=" + Convert.ToInt32(editQuantity) + ", ";
-            updateQuery += "Topping='" + editTopping + "', ";
-            updateQuery += "BrownSugar=" + editBrownSugar + ", ";
-            updateQuery += "WhiteSugar=" + editWhiteSugar + ", ";
-            updateQuery += "Salt=" + editSalt + ", ";
-            updateQuery += "Creamer=" + editCreamer + ", ";
-            updateQuery += "Stirrer=" + editStirrer + " ";
-            updateQuery += "WHERE OrderId=" + orderId;
-
-            con.Open();
-            SqlCommand cmdUpdate = new SqlCommand(updateQuery, con);
-
-            int added = 0;
-            try
-            {
-                added = cmdUpdate.ExecuteNonQuery();
-
-                //check if record was successfully inserted
-                if (added > 0)
+                //calculate total price
+                double priceCoffeeType = 0.00, priceTopping, priceQuantity, totalPrice;
+                switch (sFlavor)
                 {
-                    divOutput.InnerHtml = "<label id='orderSucess'>Your order has been updated.</label>";
-                    divOutput.InnerHtml += "<p><a href='userorderrepeater.aspx'>Back to My Orders</a></p>";
-                    divOutput.InnerHtml += "<p><a href='index.aspx'>Home</a></p>";
+                    case "Classic Americano":
+                        priceCoffeeType = 5.00;
+                        break;
+                    case "Classic Cappuccino":
+                        priceCoffeeType = 4.50;
+                        break;
+                    case "Iced Cappuccino":
+                        priceCoffeeType = 4.90;
+                        break;
+                    case "Classic Latte":
+                        priceCoffeeType = 4.20;
+                        break;
+                    case "Vanilla Latte":
+                        priceCoffeeType = 4.30;
+                        break;
+                    case "Caramel Latte":
+                        priceCoffeeType = 4.40;
+                        break;
+                    case "Mocha Latte":
+                        priceCoffeeType = 4.80;
+                        break;
                 }
-                else
-                {
-                    orderUpdateErrorMsg.Text = "Order update failed, please try again later.";
-                }
-            }
-            catch (Exception err)
-            {
-                orderUpdateErrorMsg.Text = "Order Update Error <br /> " + err.Message;
-            }
-            finally
-            {
-                con.Close();
+
+                priceTopping = sTopping != "" ? Convert.ToDouble(topping.SelectedValue) : 0.0;
+                priceQuantity = intQuantity != null ? Convert.ToDouble(intQuantity) : 0.0;
+
+                //(flavor+topping+(decocations)) * quantity
+                totalPrice = (priceCoffeeType + priceTopping + priceAddOns) * priceQuantity;
+
+                Session["editFlavor"] = sFlavor;
+                Session["editQuantity"] = editQuantity;
+                Session["editTopping"] = editTopping;
+                Session["editAddOns"] = editAddOns;
+                Session["editBrownSugar"] = editBrownSugar;
+                Session["editWhiteSugar"] = editWhiteSugar;
+                Session["editSalt"] = editSalt;
+                Session["editCreamer"] = editCreamer;
+                Session["editStirrer"] = editStirrer;
+                Session["editTotalPrice"] = totalPrice;
+                Server.Transfer("UserOrderEditConfirm.aspx");
             }
         }
 

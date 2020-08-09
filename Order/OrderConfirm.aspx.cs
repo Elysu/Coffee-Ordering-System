@@ -104,14 +104,6 @@ namespace Order
             }
         }
 
-        private void clearLabels()
-        {
-            outputCoffee.Text = "";
-            outputQuantity.Text = "";
-            outputTopping.Text = "";
-            outputAddOns.Text = "";
-        }
-
         private void outputs()
         {
             outputCoffee.Text = sCoffeeType;
