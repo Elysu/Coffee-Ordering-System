@@ -12,7 +12,8 @@ namespace Order
 {
     public partial class UserOrderRepeater : System.Web.UI.Page
     {
-        private string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
+        private static string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
+        SqlConnection con = new SqlConnection(connectionString);
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,10 +22,24 @@ namespace Order
                 Response.Redirect("Login.aspx");
             }
 
-            DataSet ds = GetData();
+            con.Open();
+            string countOrdersQuery = "select count(*) from Orders where MemberId='" + Session["MemberId"].ToString() + "'";
+            SqlCommand cmdCountOrders = new SqlCommand(countOrdersQuery, con);
+            int countOrders = Convert.ToInt32(cmdCountOrders.ExecuteScalar().ToString());
+            con.Close();
 
-            repeaterOrder.DataSource = ds;
-            repeaterOrder.DataBind();
+            if (countOrders < 1)
+            {
+                orderTable.InnerHtml = "<h4>You do not have any orders yet.</h4>";
+                orderTable.InnerHtml += "<a href='ordertest.aspx'>Click here to order coffees</a>";
+            }
+            else
+            {
+                DataSet ds = GetData();
+
+                repeaterOrder.DataSource = ds;
+                repeaterOrder.DataBind();
+            }
         }
 
         private DataSet GetData()

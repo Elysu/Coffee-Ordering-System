@@ -11,7 +11,7 @@ namespace Order
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string currentPage = this.Page.Request.FilePath;
+            string currentPage = Page.Request.FilePath;
 
             switch (currentPage)
             {
@@ -34,12 +34,8 @@ namespace Order
             else
             {
                 btnLoginSwitch.InnerHtml = "<a id='loginButton' runat='server' href='login.aspx'>Login</a>";
+                btnLoginSwitch.InnerHtml += "<a id='registerButton' runat='server' href='register.aspx'>Register</a>";
             }
-        }
-
-        protected void logout_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

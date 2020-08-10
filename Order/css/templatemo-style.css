@@ -659,6 +659,13 @@ button.tm-more-button {
     margin-left: 20px;
 }
 
+#registerButton {
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
 #logoutButton {
     border: 1px solid white;
     padding: 10px;
@@ -754,6 +761,12 @@ button.tm-more-button {
   }
 
   #loginButton {
+    border: none;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+
+  #registerButton {
     border: none;
     padding-bottom: 15px;
     margin-bottom: 5px;

@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h2>CUSTOMER'S ORDERS</h2>
+
     <div id="orderTable" runat="server" class="tm-menu-product-content col-lg-9 col-md-9"> <!-- menu content -->   
         <asp:Repeater ID="repeaterAdminOrder" runat="server">
             <ItemTemplate>
