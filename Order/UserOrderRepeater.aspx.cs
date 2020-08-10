@@ -89,6 +89,11 @@ namespace Order
                 }
             }
 
+            if (addOns == "")
+            {
+                addOns = "None";
+            }
+
             return addOns;
         }
 

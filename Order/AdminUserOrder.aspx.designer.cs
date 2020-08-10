@@ -15,21 +15,21 @@ namespace Order
     {
 
         /// <summary>
-        /// coffeeImage control.
+        /// orderTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image coffeeImage;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl orderTable;
 
         /// <summary>
-        /// orderLinkButton control.
+        /// repeaterAdminOrder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton orderLinkButton;
+        protected global::System.Web.UI.WebControls.Repeater repeaterAdminOrder;
     }
 }

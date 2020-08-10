@@ -52,7 +52,7 @@ namespace Order
                     SqlCommand cmdMemberUsername = new SqlCommand(MemberUsernameQuery, con);
                     string dbMemberUsername = cmdMemberUsername.ExecuteScalar().ToString();
 
-                    string roleQuery = "select MemberPassword from Members where MemberEmail='" + userEmail + "'";
+                    string roleQuery = "select MemberRole from Members where MemberEmail='" + userEmail + "'";
                     SqlCommand cmdRole = new SqlCommand(roleQuery, con);
                     string dbRole = cmdRole.ExecuteScalar().ToString();
 

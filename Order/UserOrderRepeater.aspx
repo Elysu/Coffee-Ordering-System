@@ -8,7 +8,7 @@
 
                 <div class='tm-product'>
                         <asp:Image ID="coffeeImage" ImageUrl='<%# GetImage(Eval("Flavor").ToString()) %>' runat="server" Width="136px" Height="136px"/>
-                        <div class='tm-product-text' id='OrderRepeaterDetials'>
+                        <div class='tm-product-text OrderRepeaterDetails'>
                             <asp:LinkButton ID="orderLinkButton" runat="server" CommandArgument='<%# Eval("OrderId").ToString() %>' OnClick="sendOrderID">
                                 <h3 class="tm-product-title"><%# Eval("Flavor") %></h3>
                             </asp:LinkButton>

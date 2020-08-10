@@ -28,6 +28,32 @@ namespace Order
                 setCoffee();
                 orderId = num;
 
+                if (Session["MemberRole"].ToString() == "admin")
+                {
+                    con.Open();
+                    string checkStatus = "select Status from Orders where OrderId='" + orderId + "'";
+                    SqlCommand cmdStatus = new SqlCommand(checkStatus, con);
+                    string dbStatus = cmdStatus.ExecuteScalar().ToString();
+                    con.Close();
+
+                    statusDropDown.Items.Add(new ListItem(dbStatus, dbStatus));
+                    statusDropDown.Items.FindByText(dbStatus).Selected = true;
+                    switch (dbStatus)
+                    {
+                        case "Pending":
+                            statusDropDown.Items.Add(new ListItem("Confirmed", "Confirmed"));
+                            break;
+                        case "Confirmed":
+                            statusDropDown.Items.Add(new ListItem("Pending", "Pending"));
+                            break;
+                    }
+
+                    statusDropDown.Visible = true;
+                    submitDelete.Visible = true;
+                    lblStatusAdmin.Visible = true;
+                    lblStatus.Visible = false;
+                }
+
                 con.Open();
 
                 string orderIdQuery = "select * from Orders where OrderId='" + orderId + "'";
@@ -83,7 +109,7 @@ namespace Order
                     }
                 }
 
-                if (status == "Confirmed")
+                if (status == "Confirmed" && Session["MemberRole"].ToString() == "user")
                 {
                     quantity.ReadOnly = true;
                     topping.Enabled = false;
@@ -208,6 +234,12 @@ namespace Order
                 Session["editCreamer"] = editCreamer;
                 Session["editStirrer"] = editStirrer;
                 Session["editTotalPrice"] = totalPrice.ToString();
+
+                if (Session["MemberRole"].ToString() == "admin")
+                {
+                    Session["editStatus"] = statusDropDown.SelectedValue.ToString();
+                }
+
                 Server.Transfer("UserOrderEditConfirm.aspx");
             }
         }

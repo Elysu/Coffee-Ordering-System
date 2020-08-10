@@ -12,6 +12,12 @@
         <br />
 
         <asp:Label runat="server" Text="Status: " ID="lblStatus"></asp:Label>
+        
+        <br />
+
+        <asp:Label runat="server" Text="Status: " ID="lblStatusAdmin" Visible="false"></asp:Label>
+        <asp:DropDownList ID="statusDropDown" runat="server" Visible="false">
+        </asp:DropDownList>
 
         <br />
 
@@ -48,6 +54,7 @@
         <br />
 
         <asp:Button ID="submit" runat="server" Text="Submit Order" OnClick="submit_Click"/>
+        <asp:Button ID="submitDelete" runat="server" Text="Delete Order" Visible="false"/>
 
         <br />
 

@@ -7,6 +7,9 @@
         <br />
         <p>Please double check before updating your order.</p>
         <br />
+
+        <asp:Label ID="outputStatus" runat="server" Text="Status: " Visible="false"></asp:Label>
+
         <br />
 
         <asp:Image ID="image" runat="server" Width="400px" Height="300px" />

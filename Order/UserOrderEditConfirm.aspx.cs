@@ -13,51 +13,55 @@ namespace Order
     {
         private string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
 
-        string editFlavor, editTopping, editAddOns;
+        string editFlavor, editTopping, editAddOns, editStatus;
         int num, orderId, editBrownSugar, editWhiteSugar, editSalt, editCreamer, editStirrer, editQuantity;
         double totalPrice = 0.0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                editFlavor = Session["editFlavor"].ToString();
-                editQuantity = Convert.ToInt32(Session["editQuantity"].ToString());
-                editTopping = Session["editTopping"].ToString();
-                editAddOns = Session["editAddOns"].ToString();
-                editBrownSugar = Convert.ToInt32(Session["editBrownSugar"].ToString());
-                editWhiteSugar = Convert.ToInt32(Session["editWhiteSugar"].ToString());
-                editSalt = Convert.ToInt32(Session["editSalt"].ToString());
-                editCreamer = Convert.ToInt32(Session["editCreamer"].ToString());
-                editStirrer = Convert.ToInt32(Session["editStirrer"].ToString());
-                totalPrice = Convert.ToDouble(Session["editTotalPrice"].ToString());
+            if (Session["MemberRole"].ToString() == "admin")
+            {
+                editStatus = Session["editStatus"].ToString();
+            }
 
-                //coffee types
-                switch (editFlavor)
-                {
-                    case "Classic Cappuccino":
-                        image.ImageUrl = "images/cappuccino/cappuccino.jpg";
-                        break;
-                    case "Iced Cappuccino":
-                        image.ImageUrl = "images/cappuccino/iced cappuccino.jpg";
-                        break;
-                    case "Classic Americano":
-                        image.ImageUrl = "images/americano/americano.jpg";
-                        break;
-                    case "Classic Latte":
-                        image.ImageUrl = "images/latte/latte.jpg";
-                        break;
-                    case "Vanilla Latte":
-                        image.ImageUrl = "images/latte/vanilla latte.jpg";
-                        break;
-                    case "Caramel Latte":
-                        image.ImageUrl = "images/latte/caramel latte.jpg";
-                        break;
-                    case "Mocha Latte":
-                        image.ImageUrl = "images/latte/mocha latte.jpg";
-                        break;
-                }
+            editFlavor = Session["editFlavor"].ToString();
+            editQuantity = Convert.ToInt32(Session["editQuantity"].ToString());
+            editTopping = Session["editTopping"].ToString();
+            editAddOns = Session["editAddOns"].ToString();
+            editBrownSugar = Convert.ToInt32(Session["editBrownSugar"].ToString());
+            editWhiteSugar = Convert.ToInt32(Session["editWhiteSugar"].ToString());
+            editSalt = Convert.ToInt32(Session["editSalt"].ToString());
+            editCreamer = Convert.ToInt32(Session["editCreamer"].ToString());
+            editStirrer = Convert.ToInt32(Session["editStirrer"].ToString());
+            totalPrice = Convert.ToDouble(Session["editTotalPrice"].ToString());
 
-                outputs();
-            
+            //coffee types
+            switch (editFlavor)
+            {
+                case "Classic Cappuccino":
+                    image.ImageUrl = "images/cappuccino/cappuccino.jpg";
+                    break;
+                case "Iced Cappuccino":
+                    image.ImageUrl = "images/cappuccino/iced cappuccino.jpg";
+                    break;
+                case "Classic Americano":
+                    image.ImageUrl = "images/americano/americano.jpg";
+                    break;
+                case "Classic Latte":
+                    image.ImageUrl = "images/latte/latte.jpg";
+                    break;
+                case "Vanilla Latte":
+                    image.ImageUrl = "images/latte/vanilla latte.jpg";
+                    break;
+                case "Caramel Latte":
+                    image.ImageUrl = "images/latte/caramel latte.jpg";
+                    break;
+                case "Mocha Latte":
+                    image.ImageUrl = "images/latte/mocha latte.jpg";
+                    break;
+            }
+
+            outputs();
         }
 
         protected void submitConfirm_Click(object sender, EventArgs e)
@@ -75,6 +79,12 @@ namespace Order
             updateQuery += "Salt=" + editSalt + ", ";
             updateQuery += "Creamer=" + editCreamer + ", ";
             updateQuery += "Stirrer=" + editStirrer + ", ";
+
+            if (Session["MemberRole"].ToString() == "admin")
+            {
+                updateQuery += "Status='" + editStatus + "', ";
+            }
+
             updateQuery += "TotalPrice=" + totalPrice + " ";
             updateQuery += "WHERE OrderId=" + orderId;
 
@@ -88,7 +98,7 @@ namespace Order
                 //check if record was successfully inserted
                 if (added > 0)
                 {
-                    output.InnerHtml = "<label id='OrderEditSuccess'>Your order has been updated.</label>";
+                    output.InnerHtml = "<label id='OrderEditSuccess'>Order has been updated.</label>";
                     output.InnerHtml += "<p><a href='userorderrepeater.aspx'>Back to My Orders</a></p>";
                     output.InnerHtml += "<p><a href='index.aspx'>Home</a></p>";
                 }
@@ -115,6 +125,11 @@ namespace Order
 
         private void outputs()
         {
+            if (Session["MemberRole"].ToString() == "admin")
+            {
+                outputStatus.Text += editStatus != null ? editStatus : "";
+                outputStatus.Visible = true;
+            }
             outputCoffee.Text = editFlavor;
             outputQuantity.Text = editQuantity.ToString();
             outputTopping.Text = editTopping;
