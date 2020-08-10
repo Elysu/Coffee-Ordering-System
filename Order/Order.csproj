@@ -254,6 +254,7 @@
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
+    <Content Include="sitemap.sitemap" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
