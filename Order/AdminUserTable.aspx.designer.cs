@@ -15,21 +15,12 @@ namespace Order
     {
 
         /// <summary>
-        /// GridView1 control.
+        /// MemberTableRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
-        /// <summary>
-        /// AdminUserEditDS control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource AdminUserEditDS;
+        protected global::System.Web.UI.WebControls.Repeater MemberTableRepeater;
     }
 }

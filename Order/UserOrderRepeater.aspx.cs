@@ -44,7 +44,6 @@ namespace Order
 
         private DataSet GetData()
         {
-            SqlConnection con = new SqlConnection(connectionString);
             string userOrderQuery = "select * from Orders where MemberId='" + Session["MemberId"].ToString() + "'";
             using (con)
             {
