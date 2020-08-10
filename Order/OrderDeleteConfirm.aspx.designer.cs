@@ -15,6 +15,15 @@ namespace Order
     {
 
         /// <summary>
+        /// outputDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl outputDelete;
+
+        /// <summary>
         /// lblDeleteMsg control.
         /// </summary>
         /// <remarks>
@@ -40,5 +49,14 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button cancelDelete;
+
+        /// <summary>
+        /// deleteErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label deleteErrorMsg;
     }
 }

@@ -27,7 +27,7 @@ namespace Order
 
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
-            string deleteOrderQuery = "";
+            string deleteOrderQuery = "DELETE FROM Orders WHERE OrderId='" + orderId + "'";
             SqlCommand cmdDeleteOrder = new SqlCommand(deleteOrderQuery, con);
 
             int delete = 0;
@@ -38,16 +38,17 @@ namespace Order
                 //check if record was successfully inserted
                 if (delete > 0)
                 {
-                    
+                    outputDelete.InnerHtml = "<label>This order has been deleted.</label> <br />";
+                    outputDelete.InnerHtml += "<a href='AdminUserOrder.aspx'>Back to Customer's Orders</a>";
                 }
                 else
                 {
-                    regErrorMsg.Text = "Registration unsuccessful, please try again later.";
+                    deleteErrorMsg.Text = "Order delete unsuccessful, please try again later.";
                 }
             }
             catch (Exception err)
             {
-                regErrorMsg.Text = "Registration Error <br /> " + err.Message;
+                deleteErrorMsg.Text = "Delete Error <br /> " + err.Message;
             }
             finally
             {
