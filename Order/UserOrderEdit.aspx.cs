@@ -244,6 +244,11 @@ namespace Order
             }
         }
 
+        protected void submitDelete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("OrderDeleteConfirm.aspx");
+        }
+
         private void setCoffee()
         {
             string orderId = Global.OrderId;

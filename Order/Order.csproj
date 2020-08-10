@@ -112,6 +112,7 @@
     <Content Include="logout.aspx" />
     <Content Include="menu.aspx" />
     <Content Include="OrderConfirm.aspx" />
+    <Content Include="OrderDeleteConfirm.aspx" />
     <Content Include="OrderTest.aspx" />
     <Content Include="register.aspx" />
     <Content Include="UserOrder.aspx" />
@@ -179,6 +180,13 @@
     </Compile>
     <Compile Include="OrderConfirm.aspx.designer.cs">
       <DependentUpon>OrderConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDeleteConfirm.aspx.cs">
+      <DependentUpon>OrderDeleteConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderDeleteConfirm.aspx.designer.cs">
+      <DependentUpon>OrderDeleteConfirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderTest.aspx.cs">
       <DependentUpon>OrderTest.aspx</DependentUpon>

@@ -53,8 +53,8 @@
 
         <br />
 
-        <asp:Button ID="submit" runat="server" Text="Submit Order" OnClick="submit_Click"/>
-        <asp:Button ID="submitDelete" runat="server" Text="Delete Order" Visible="false"/>
+        <asp:Button ID="submit" runat="server" Text="Update Order" OnClick="submit_Click"/>
+        <asp:Button ID="submitDelete" runat="server" Text="Delete Order" Visible="false" OnClick="submitDelete_Click"/>
 
         <br />
 
