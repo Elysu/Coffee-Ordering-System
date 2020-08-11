@@ -48,7 +48,7 @@ namespace Order
             SqlCommand cmdMember = new SqlCommand(memberQuery, con);
             SqlDataReader reader = cmdMember.ExecuteReader();
 
-            //get 
+            //get data
             while (reader.Read())
             {
                 MemberName = reader["MemberName"].ToString();
@@ -79,7 +79,7 @@ namespace Order
                     ddlRole.Items.Add(new ListItem("user", "user"));
                     break;
             }
-        }        
+        }
 
         private void setMemberId()
         {
