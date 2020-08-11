@@ -79,7 +79,7 @@ namespace Order
                     ddlRole.Items.Add(new ListItem("user", "user"));
                     break;
             }
-        }
+        }        
 
         private void setMemberId()
         {
@@ -145,6 +145,16 @@ namespace Order
                     con.Close();
                 }
             }
+        }
+
+        protected void submitUserDelete_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminUserDelete.aspx");
+        }
+
+        protected void submitCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminUserTable.aspx");
         }
 
         protected void customUsername_ServerValidate(object source, ServerValidateEventArgs args)

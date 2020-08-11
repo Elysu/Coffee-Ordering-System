@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminUserDelete.aspx" />
     <Content Include="AdminUserEdit.aspx" />
     <Content Include="AdminUserOrder.aspx" />
     <Content Include="AdminUserTable.aspx" />
@@ -125,6 +126,13 @@
     <Content Include="OrderForm.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminUserDelete.aspx.cs">
+      <DependentUpon>AdminUserDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUserDelete.aspx.designer.cs">
+      <DependentUpon>AdminUserDelete.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminUserEdit.aspx.cs">
       <DependentUpon>AdminUserEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

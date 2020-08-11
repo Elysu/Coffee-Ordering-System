@@ -56,5 +56,13 @@ namespace Order
             Global.MemberId = memberId;
             Response.Redirect("AdminUserEdit.aspx");
         }
+
+        protected void UserDeleteLinkBtn_Click(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)(sender);
+            string memberId = btn.CommandArgument;
+            Global.MemberId = memberId;
+            Response.Redirect("AdminUserDelete.aspx");
+        }
     }
 }

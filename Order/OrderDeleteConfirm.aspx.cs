@@ -17,7 +17,10 @@ namespace Order
         string orderId;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["MemberEmail"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void submitDelete_Click(object sender, EventArgs e)

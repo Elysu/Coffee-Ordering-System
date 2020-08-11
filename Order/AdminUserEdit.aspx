@@ -58,6 +58,8 @@
             <tr>
                 <td colspan="2">
                     <asp:Button ID="submitAdminUserEdit" runat="server" Text="Update" OnClick="submitAdminUserEdit_Click" />
+                    <asp:Button ID="submitUserDelete" runat="server" Text="Delete User" OnClick="submitUserDelete_Click" />
+                    <asp:Button ID="submitCancel" runat="server" Text="Back to Member List" OnClick="submitCancel_Click" />
                 </td>
             </tr>
         </table>
