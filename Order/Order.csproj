@@ -122,6 +122,7 @@
     <Content Include="UserOrderEdit.aspx" />
     <Content Include="UserOrderEditConfirm.aspx" />
     <Content Include="UserOrderRepeater.aspx" />
+    <Content Include="UserPasswordEdit.aspx" />
     <Content Include="UserProfileEdit.aspx" />
     <Content Include="Web.config" />
     <Content Include="OrderForm.aspx" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="UserOrderRepeater.aspx.designer.cs">
       <DependentUpon>UserOrderRepeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPasswordEdit.aspx.cs">
+      <DependentUpon>UserPasswordEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPasswordEdit.aspx.designer.cs">
+      <DependentUpon>UserPasswordEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserProfileEdit.aspx.cs">
       <DependentUpon>UserProfileEdit.aspx</DependentUpon>
