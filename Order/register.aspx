@@ -8,6 +8,7 @@
 
     Username:<asp:TextBox ID="regUsername" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="reqRegUsername" runat="server" ErrorMessage="Username is required" ControlToValidate="regUsername" EnableClientScript="False" ForeColor="Red"></asp:RequiredFieldValidator>
+    <asp:RegularExpressionValidator ID="regRegUsername" runat="server" ControlToValidate="regUsername" ErrorMessage="Username character must be more than 2" ValidationExpression=".{3}.*" EnableClientScript="False" ForeColor="Red"/>
     <asp:Label ID="regErrorUsername" runat="server" Text="" ForeColor="Red"></asp:Label>
     
     <br />

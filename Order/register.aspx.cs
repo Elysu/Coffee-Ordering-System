@@ -33,6 +33,7 @@ namespace Order
 
             //validation passed
             if (reqRegUsername.IsValid &&
+                regRegUsername.IsValid &&
                 reqRegEmail.IsValid &&
                 reqRegPassword.IsValid &&
                 regRegPassword.IsValid &&
