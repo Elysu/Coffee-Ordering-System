@@ -20,6 +20,13 @@ namespace Order
             {
                 Response.Redirect("Login.aspx");
             }
+            else
+            {
+                if (Session["MemberRole"].ToString() == "user")
+                {
+                    Response.Redirect("Error404.aspx");
+                }
+            }
         }
 
         protected void submitUserDelete_Click(object sender, EventArgs e)

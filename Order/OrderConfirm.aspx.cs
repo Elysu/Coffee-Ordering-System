@@ -18,6 +18,11 @@ namespace Order
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["MemberEmail"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
             sCoffeeType = Session["CoffeeType"].ToString();
             sQuantity = Session["Quantity"].ToString();
             sTopping = Session["Topping"].ToString();

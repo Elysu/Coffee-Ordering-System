@@ -19,6 +19,11 @@ namespace Order
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["MemberEmail"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+
             if (Session["MemberRole"].ToString() == "admin")
             {
                 editStatus = Session["editStatus"].ToString();
