@@ -33,6 +33,13 @@ namespace Order
                 btnLoginSwitch.InnerHtml += "<div class='dropdown-content'>";
                 btnLoginSwitch.InnerHtml += "<a runat='server' href='UserProfileEdit.aspx'>Profile</a>";
                 btnLoginSwitch.InnerHtml += "<a runat='server' href='UserOrderRepeater.aspx'>My Orders</a>";
+
+                if (Session["MemberRole"].ToString() == "admin")
+                {
+                    btnLoginSwitch.InnerHtml += "<a runat='server' href='AdminUserOrder.aspx'>Customer's Orders</a>";
+                    btnLoginSwitch.InnerHtml += "<a runat='server' href='AdminUserTable.aspx'>Member List</a>";
+                }
+
                 btnLoginSwitch.InnerHtml += "<a runat='server' href='logout.aspx'>Logout</a>";
                 btnLoginSwitch.InnerHtml += "</div>";
                 btnLoginSwitch.InnerHtml += "</div>";

@@ -8,10 +8,13 @@
 
             <br />
 
+            <asp:Label runat="server" Text="" ID="lblMsg" Visible="false" CssClass="OrderLabels"></asp:Label>
+
+            <br />
+            <br />
+
             <asp:Image ID="image" runat="server" Width="400px" Height="300px"/>
         </div>
-
-        <asp:Label runat="server" Text="" ID="lblMsg" Visible="false" CssClass="OrderLabels"></asp:Label>
 
         <br />
         <br />
@@ -25,9 +28,10 @@
         <br />
 
         <asp:Label runat="server" Text="Status: " ID="lblStatusAdmin" Visible="false" CssClass="OrderLabels"></asp:Label>
-        <asp:DropDownList ID="statusDropDown" runat="server" Visible="false">
+        <asp:DropDownList ID="statusDropDown" runat="server" Visible="false" CssClass="inputs">
         </asp:DropDownList>
 
+        <br />
         <br />
 
         <asp:Label runat="server" Text="Coffee:" ID="lblCoffee" CssClass="OrderLabels"></asp:Label>

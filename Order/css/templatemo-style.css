@@ -749,9 +749,29 @@ button.tm-more-button {
     font-family: "Arial";
 }
 
+.btnShort {
+    width: 20%;
+    background-color: #282726;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
 .submitDiscord:hover {
     background-color: #525959;
 	color: #c79c60;
+}
+
+.btnShort:hover {
+    background-color: #525959;
+    color: #c79c60;
 }
 
 .h2-font {

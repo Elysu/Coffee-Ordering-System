@@ -24,15 +24,6 @@ namespace Order
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOutput;
 
         /// <summary>
-        /// image control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image image;
-
-        /// <summary>
         /// lblMsg control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMsg;
+
+        /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image;
 
         /// <summary>
         /// lblOrderId control.
