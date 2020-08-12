@@ -15,6 +15,15 @@ namespace Order
     {
 
         /// <summary>
+        /// lblCoffee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCoffee;
+
+        /// <summary>
         /// coffeeType control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList coffeeType;
+
+        /// <summary>
+        /// lblQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQuantity;
 
         /// <summary>
         /// quantity control.
@@ -51,6 +69,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RangeValidator rangeQuantity;
 
         /// <summary>
+        /// lblTopping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTopping;
+
+        /// <summary>
         /// topping control.
         /// </summary>
         /// <remarks>
@@ -67,6 +94,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTopping;
+
+        /// <summary>
+        /// lblAddOns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAddOns;
 
         /// <summary>
         /// addOns control.

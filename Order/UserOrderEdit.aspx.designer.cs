@@ -24,6 +24,15 @@ namespace Order
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divOutput;
 
         /// <summary>
+        /// image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image image;
+
+        /// <summary>
         /// lblMsg control.
         /// </summary>
         /// <remarks>
@@ -69,6 +78,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.DropDownList statusDropDown;
 
         /// <summary>
+        /// lblCoffee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCoffee;
+
+        /// <summary>
         /// lblCoffeeType control.
         /// </summary>
         /// <remarks>
@@ -76,6 +94,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCoffeeType;
+
+        /// <summary>
+        /// lblQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQuantity;
 
         /// <summary>
         /// quantity control.
@@ -105,6 +132,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RangeValidator rangeQuantity;
 
         /// <summary>
+        /// lblTopping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTopping;
+
+        /// <summary>
         /// topping control.
         /// </summary>
         /// <remarks>
@@ -121,6 +157,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator requiredTopping;
+
+        /// <summary>
+        /// lblAddOns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAddOns;
 
         /// <summary>
         /// addOns control.

@@ -33,7 +33,7 @@ http://www.templatemo.com/tm-466-cafe-house
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body runat="server" id="mainBody">
     <form id="form1" runat="server">
         <div>
             <!-- Preloader -->

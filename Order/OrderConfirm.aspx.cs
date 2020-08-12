@@ -87,8 +87,13 @@ namespace Order
                 //check if record was successfully inserted
                 if (added > 0)
                 {
-                    output.InnerHtml = "<label id='orderSucess'>Your order has been confirmed, thank you.</label>";
-                    output.InnerHtml += "<p><a href='index.aspx'>Back to Home</a></p>";
+                    output.InnerHtml = "<div class='SetToCenter'>";
+                    output.InnerHtml += "<label id='orderSucess'>Your order has been placed, thank you.</label>";
+                    output.InnerHtml += "<br />";
+                    output.InnerHtml += "<a href='index.aspx'>Back to Home</a>";
+                    output.InnerHtml += "&nbsp;&nbsp;&nbsp;&nbsp;";
+                    output.InnerHtml += "<a href='UserOrderRepeater.aspx'>Go to My Orders</a>";
+                    output.InnerHtml += "</div>";
                 }
                 else
                 {

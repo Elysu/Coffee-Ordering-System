@@ -28,8 +28,14 @@ namespace Order
 
             if (Session["MemberEmail"] != null)
             {
-                btnLoginSwitch.InnerHtml = "<a runat='server' id='displayName'>" + Session["MemberUsername"].ToString() + "</a>";
-                btnLoginSwitch.InnerHtml += "<a runat='server' href='logout.aspx' id='logoutButton'>Logout</a>";
+                btnLoginSwitch.InnerHtml = "<div class='dropdown'>";
+                btnLoginSwitch.InnerHtml += "<a runat='server' class='dropdown' id='displayName'>" + Session["MemberUsername"].ToString() + "</a>";
+                btnLoginSwitch.InnerHtml += "<div class='dropdown-content'>";
+                btnLoginSwitch.InnerHtml += "<a runat='server' href='UserProfileEdit.aspx'>Profile</a>";
+                btnLoginSwitch.InnerHtml += "<a runat='server' href='UserOrderRepeater.aspx'>My Orders</a>";
+                btnLoginSwitch.InnerHtml += "<a runat='server' href='logout.aspx'>Logout</a>";
+                btnLoginSwitch.InnerHtml += "</div>";
+                btnLoginSwitch.InnerHtml += "</div>";
             }
             else
             {

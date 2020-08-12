@@ -295,7 +295,7 @@ ul {
 
 /* Main content */
 .light-gray-bg { background-color: #e4e4e4; }
-.tm-main-section { padding-top: 170px; }
+.tm-main-section { padding-top: 100px; }
 .img-thumbnail { padding: 8px; }
 .inline-block { display: inline-block; }
 .shadow-img {
@@ -682,6 +682,113 @@ button.tm-more-button {
 
 .OrderRepeaterDetails {
     width: 100%;
+}
+
+/* Order Form CSS */
+.inputs {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.rblListitems input[type="radio"] {
+    margin-right: 10px;
+}
+
+.rblListitems input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.rblListitems label {
+    font-size: 12pt;
+    vertical-align: middle;
+}
+
+.form-bg-color {
+    background-color: #e4e4e4;
+    padding: 20px 30px;
+    margin: 8px 0;
+    margin-top: -5%;
+    margin-bottom: 5%;
+    border: 1px solid #282726;
+}
+
+.OrderLabels {
+    font-family: "Arial";
+    font-size: 15pt;
+}
+
+.OrderDetails {
+    font-family: "Arial";
+    font-size: 13pt;
+    width: 100%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submitDiscord {
+    width: 100%;
+    background-color: #282726;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15pt;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+.submitDiscord:hover {
+    background-color: #525959;
+	color: #c79c60;
+}
+
+.h2-font {
+    font-family: "Arial";
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.SetToCenter {
+    text-align: center;
+}
+
+/* Dropdown content when logged in */
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    background-color: #252828;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 @media screen and (max-width: 991px) {

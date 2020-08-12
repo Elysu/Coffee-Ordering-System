@@ -33,6 +33,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.Image image;
 
         /// <summary>
+        /// lblCoffee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCoffee;
+
+        /// <summary>
         /// outputCoffee control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label outputCoffee;
+
+        /// <summary>
+        /// lblQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblQuantity;
 
         /// <summary>
         /// outputQuantity control.
@@ -51,6 +69,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.Label outputQuantity;
 
         /// <summary>
+        /// lblTopping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTopping;
+
+        /// <summary>
         /// outputTopping control.
         /// </summary>
         /// <remarks>
@@ -60,6 +87,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.Label outputTopping;
 
         /// <summary>
+        /// lblAddOns control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAddOns;
+
+        /// <summary>
         /// outputAddOns control.
         /// </summary>
         /// <remarks>
@@ -67,6 +103,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label outputAddOns;
+
+        /// <summary>
+        /// lblTotalPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalPrice;
 
         /// <summary>
         /// outputTotal control.
