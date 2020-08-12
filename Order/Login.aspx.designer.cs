@@ -15,6 +15,15 @@ namespace Order
     {
 
         /// <summary>
+        /// lblLoginEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLoginEmail;
+
+        /// <summary>
         /// loginEmail control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLoginEmail;
+
+        /// <summary>
+        /// lblLoginPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLoginPassword;
 
         /// <summary>
         /// loginPassword control.

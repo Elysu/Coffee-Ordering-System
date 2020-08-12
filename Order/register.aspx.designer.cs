@@ -15,6 +15,15 @@ namespace Order
     {
 
         /// <summary>
+        /// lblRegUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegUsername;
+
+        /// <summary>
         /// regUsername control.
         /// </summary>
         /// <remarks>
@@ -51,6 +60,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.Label regErrorUsername;
 
         /// <summary>
+        /// lblRegEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegEmail;
+
+        /// <summary>
         /// regEmail control.
         /// </summary>
         /// <remarks>
@@ -76,6 +94,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label regErrorEmail;
+
+        /// <summary>
+        /// lblRegPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegPassword;
 
         /// <summary>
         /// regPassword control.
@@ -105,6 +132,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regRegPassword;
 
         /// <summary>
+        /// lblRegConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegConfirmPassword;
+
+        /// <summary>
         /// regConfirmPassword control.
         /// </summary>
         /// <remarks>
@@ -132,6 +168,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.CompareValidator compareRegConfirmPassword;
 
         /// <summary>
+        /// lblRegName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegName;
+
+        /// <summary>
         /// regName control.
         /// </summary>
         /// <remarks>
@@ -148,6 +193,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqRegName;
+
+        /// <summary>
+        /// lblRegPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblRegPhone;
 
         /// <summary>
         /// regPhone control.

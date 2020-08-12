@@ -24,15 +24,6 @@ namespace Order
         protected global::System.Web.UI.WebControls.Label lblLogout;
 
         /// <summary>
-        /// logoutCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button logoutCancel;
-
-        /// <summary>
         /// logoutConfirm control.
         /// </summary>
         /// <remarks>
@@ -40,5 +31,14 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button logoutConfirm;
+
+        /// <summary>
+        /// logoutCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutCancel;
     }
 }
