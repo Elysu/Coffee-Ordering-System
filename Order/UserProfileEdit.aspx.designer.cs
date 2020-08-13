@@ -42,6 +42,15 @@ namespace Order
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuContent;
 
         /// <summary>
+        /// lblEmailDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEmailDisplay;
+
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmail;
+
+        /// <summary>
+        /// lblUsernameDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUsernameDisplay;
 
         /// <summary>
         /// txtboxUsername control.
@@ -87,6 +105,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.CustomValidator customUsername;
 
         /// <summary>
+        /// lblName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblName;
+
+        /// <summary>
         /// txtboxName control.
         /// </summary>
         /// <remarks>
@@ -103,6 +130,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqName;
+
+        /// <summary>
+        /// lblPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPhone;
 
         /// <summary>
         /// txtboxPhone control.

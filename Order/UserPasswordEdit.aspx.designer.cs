@@ -42,6 +42,15 @@ namespace Order
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl menuContent;
 
         /// <summary>
+        /// lblCurrentPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCurrentPassword;
+
+        /// <summary>
         /// txtboxCurrentPassword control.
         /// </summary>
         /// <remarks>
@@ -69,6 +78,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regExpCurrentPassword;
 
         /// <summary>
+        /// lblNewPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNewPassword;
+
+        /// <summary>
         /// txtboxNewPassword control.
         /// </summary>
         /// <remarks>
@@ -94,6 +112,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regExpNewPassword;
+
+        /// <summary>
+        /// lblConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblConfirmPassword;
 
         /// <summary>
         /// txtboxConfirmPassword control.

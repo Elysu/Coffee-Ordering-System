@@ -97,6 +97,9 @@ namespace Order
                 {
                     con.Close();
                 }
+            } else
+            {
+                lblMsg.Text = "";
             }
         }
 

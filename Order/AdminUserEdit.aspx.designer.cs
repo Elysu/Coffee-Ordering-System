@@ -24,6 +24,15 @@ namespace Order
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl outputAdminMember;
 
         /// <summary>
+        /// lblMember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMember;
+
+        /// <summary>
         /// lblMemberId control.
         /// </summary>
         /// <remarks>
@@ -31,6 +40,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMemberId;
+
+        /// <summary>
+        /// lblMemberUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMemberUsername;
 
         /// <summary>
         /// txtboxUsername control.
@@ -69,6 +87,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.CustomValidator customUsername;
 
         /// <summary>
+        /// lblMemberEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMemberEmail;
+
+        /// <summary>
         /// txtboxEmail control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CustomValidator customEmail;
+
+        /// <summary>
+        /// lblMemberPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMemberPassword;
 
         /// <summary>
         /// txtboxPassword control.
@@ -123,6 +159,15 @@ namespace Order
         protected global::System.Web.UI.WebControls.RegularExpressionValidator regExpPassword;
 
         /// <summary>
+        /// lblMemberRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMemberRole;
+
+        /// <summary>
         /// ddlRole control.
         /// </summary>
         /// <remarks>
@@ -130,6 +175,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlRole;
+
+        /// <summary>
+        /// lblMemberName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMemberName;
 
         /// <summary>
         /// txtboxName control.
@@ -148,6 +202,15 @@ namespace Order
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqName;
+
+        /// <summary>
+        /// lblMemberPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMemberPhone;
 
         /// <summary>
         /// txtboxPhone control.

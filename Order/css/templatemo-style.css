@@ -717,6 +717,14 @@ button.tm-more-button {
     border: 1px solid #282726;
 }
 
+.form-bg-color-repeater {
+    background-color: #e4e4e4;
+    padding: 20px 30px;
+    margin: 8px 0;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
 .OrderLabels {
     font-family: "Arial";
     font-size: 15pt;
@@ -780,8 +788,74 @@ button.tm-more-button {
     font-weight: bold;
 }
 
+.h2-font-repeater {
+    font-family: "Arial";
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
 .SetToCenter {
     text-align: center;
+}
+
+.ToLeftSide {
+    width: 20%;
+    text-align: center;
+    font-size: 14pt;
+}
+
+.ToRightSide {
+    width: 80%;
+}
+
+.AlignContent {
+    width: 100%;
+}
+
+.profileActive {
+    color: #282726;
+}
+
+.TableCss {
+    width: 100%;
+}
+
+.TableCss th, td{
+    padding: 5px;
+}
+
+.TableCss th {
+    text-align: center;
+}
+
+.TableBackground {
+    background-color: #e4e4e4;
+    padding: 20px 30px;
+    margin: 8px 0;
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
+.tm-product-repeater {
+    margin: 0 auto;
+    max-width: 652px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
 /* Dropdown content when logged in */
