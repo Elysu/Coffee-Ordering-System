@@ -837,6 +837,10 @@ button.tm-more-button {
     margin-bottom: 5%;
 }
 
+.tableOrderDetails {
+    padding-left: 35px;
+}
+
 .tm-product-repeater {
     margin: 0 auto;
     max-width: 652px;

@@ -32,9 +32,34 @@ namespace Order
                 if (Session["MemberRole"].ToString() == "admin")
                 {
                     con.Open();
-                    string checkStatus = "select Status from Orders where OrderId='" + orderId + "'";
+                    string checkStatus = "select Status, MemberId from Orders where OrderId='" + orderId + "'";
                     SqlCommand cmdStatus = new SqlCommand(checkStatus, con);
-                    string dbStatus = cmdStatus.ExecuteScalar().ToString();
+                    SqlDataReader rdr = cmdStatus.ExecuteReader();
+
+                    string dbStatus = "", MemberId = "";
+
+                    while (rdr.Read())
+                    {
+                        dbStatus = rdr["Status"].ToString();
+                        MemberId = rdr["MemberId"].ToString();
+                    }
+                    con.Close();
+
+                    con.Open();
+                    string UserDetailsQuery = "select * from Members where MemberId=" + Convert.ToInt32(MemberId);
+                    SqlCommand cmdUserDetails = new SqlCommand(UserDetailsQuery, con);
+                    SqlDataReader rdrUser = cmdUserDetails.ExecuteReader();
+
+                    string name = "", username = "", phone = "", email = "";
+
+                    while (rdrUser.Read())
+                    {
+                        name = rdrUser["MemberName"].ToString();
+                        username = rdrUser["MemberUsername"].ToString();
+                        phone = rdrUser["MemberPhone"].ToString();
+                        email = rdrUser["MemberEmail"].ToString();
+                    }
+
                     con.Close();
 
                     statusDropDown.Items.Add(new ListItem(dbStatus, dbStatus));
@@ -49,9 +74,14 @@ namespace Order
                             break;
                     }
 
-                    statusDropDown.Visible = true;
+                    lblUsername.Text += username;
+                    lblEmail.Text += email;
+                    lblName.Text += name;
+                    lblPhone.Text += phone;
+                    lblMemberId.Text += MemberId;
+
+                    divAdminOutput.Visible = true;
                     submitDelete.Visible = true;
-                    lblStatusAdmin.Visible = true;
                     lblStatus.Visible = false;
                 }
 
@@ -274,18 +304,6 @@ namespace Order
         protected void submitDelete_Click(object sender, EventArgs e)
         {
             Response.Redirect("OrderDeleteConfirm.aspx");
-        }
-
-        protected void submitCancel_Click(object sender, EventArgs e)
-        {
-            object refUrl = ViewState["RefUrl"];
-            if (refUrl != null)
-            {
-                Response.Redirect(refUrl.ToString());
-            } else
-            {
-                Response.Redirect("UserOrderRepeater.aspx");
-            }
         }
 
         private void setCoffee()

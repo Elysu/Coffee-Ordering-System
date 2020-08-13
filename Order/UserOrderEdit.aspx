@@ -24,12 +24,60 @@
         <br />
 
         <asp:Label runat="server" Text="Status: " ID="lblStatus" CssClass="OrderLabels"></asp:Label>
-        
-        <br />
 
-        <asp:Label runat="server" Text="Status: " ID="lblStatusAdmin" Visible="false" CssClass="OrderLabels"></asp:Label>
-        <asp:DropDownList ID="statusDropDown" runat="server" Visible="false" CssClass="inputs">
-        </asp:DropDownList>
+        <br />
+        
+        <div id="divAdminOutput" runat="server" visible="false">
+            <table>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Customer Username: " ID="lblUsernameDisplay" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                    <td class="tableOrderDetails">
+                        <asp:Label runat="server" Text="" ID="lblUsername" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Customer Email: " ID="lblEmailDisplay" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                    <td class="tableOrderDetails">
+                        <asp:Label runat="server" Text="" ID="lblEmail" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Customer Name: " ID="lblNameDisplay" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                    <td class="tableOrderDetails">
+                        <asp:Label runat="server" Text="" ID="lblName" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Customer Phone: " ID="lblPhoneDisplay" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                    <td class="tableOrderDetails">
+                        <asp:Label runat="server" Text="" ID="lblPhone" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label runat="server" Text="Customer Member ID: " ID="lblMemberIdDisplay" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                    <td class="tableOrderDetails">
+                        <asp:Label runat="server" Text="" ID="lblMemberId" CssClass="OrderLabels"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+            <br />
+
+            <asp:Label runat="server" Text="Status: " ID="lblStatusAdmin" CssClass="OrderLabels"></asp:Label>
+            <asp:DropDownList ID="statusDropDown" runat="server" CssClass="inputs">
+            </asp:DropDownList>
+        </div>
 
         <br />
         <br />
@@ -49,30 +97,30 @@
         <br />
 
         <asp:Label runat="server" Text="Topping:" ID="lblTopping" CssClass="OrderLabels"></asp:Label>
-                <asp:RadioButtonList ID="topping" runat="server" CssClass="inputs rblListitems">
-                    <asp:ListItem Value="2.50" Text="Cinnamon"></asp:ListItem>
-                    <asp:ListItem Value="3.50" Text="Whipped Cream"></asp:ListItem>
-                    <asp:ListItem Value="2.00" Text="Nutmeg"></asp:ListItem>
-                    <asp:ListItem Value="0.00" Text="None"></asp:ListItem>
-                </asp:RadioButtonList>
-                <asp:RequiredFieldValidator ID="requiredTopping" runat="server" ControlToValidate="topping" EnableClientScript="False" ErrorMessage="Topping is required!" ForeColor="Red"></asp:RequiredFieldValidator>
+        <asp:RadioButtonList ID="topping" runat="server" CssClass="inputs rblListitems">
+            <asp:ListItem Value="2.50" Text="Cinnamon"></asp:ListItem>
+            <asp:ListItem Value="3.50" Text="Whipped Cream"></asp:ListItem>
+            <asp:ListItem Value="2.00" Text="Nutmeg"></asp:ListItem>
+            <asp:ListItem Value="0.00" Text="None"></asp:ListItem>
+        </asp:RadioButtonList>
+        <asp:RequiredFieldValidator ID="requiredTopping" runat="server" ControlToValidate="topping" EnableClientScript="False" ErrorMessage="Topping is required!" ForeColor="Red"></asp:RequiredFieldValidator>
 
         <br />
 
         <asp:Label runat="server" Text="Add-Ons:" ID="lblAddOns" CssClass="OrderLabels"></asp:Label>
-                <asp:CheckBoxList ID="addOns" runat="server" CssClass="inputs rblListitems">
-                    <asp:ListItem Value="0.50" Text="Brown Sugar"></asp:ListItem>
-                    <asp:ListItem Value="0.50" Text="White Sugar"></asp:ListItem>
-                    <asp:ListItem Value="0.50" Text="Salt"></asp:ListItem>
-                    <asp:ListItem Value="0.50" Text="Creamer"></asp:ListItem>
-                    <asp:ListItem Value="0.50" Text="Stirrer"></asp:ListItem>
-                </asp:CheckBoxList>
+        <asp:CheckBoxList ID="addOns" runat="server" CssClass="inputs rblListitems">
+            <asp:ListItem Value="0.50" Text="Brown Sugar"></asp:ListItem>
+            <asp:ListItem Value="0.50" Text="White Sugar"></asp:ListItem>
+            <asp:ListItem Value="0.50" Text="Salt"></asp:ListItem>
+            <asp:ListItem Value="0.50" Text="Creamer"></asp:ListItem>
+            <asp:ListItem Value="0.50" Text="Stirrer"></asp:ListItem>
+        </asp:CheckBoxList>
 
         <br />
 
         <asp:Button ID="submit" runat="server" Text="Update Order" OnClick="submit_Click" CssClass="submitDiscord"/>
         <asp:Button ID="submitDelete" runat="server" Text="Delete Order" Visible="false" OnClick="submitDelete_Click" CssClass="submitDiscord"/>
-        <asp:Button ID="submitCancel" runat="server" Text="Cancel" CssClass="submitDiscord" OnClick="submitCancel_Click"/>
+        <input type="button" value="Cancel" onclick="history.go(-1);return false;" class="submitDiscord">
         <br />
 
         <asp:Label ID="orderUpdateErrorMsg" runat="server" Text="" ForeColor="Red"></asp:Label>
