@@ -13,6 +13,7 @@ namespace Order
     {
         private static string connectionString = WebConfigurationManager.ConnectionStrings["userConn"].ConnectionString;
         string BrownSugar, WhiteSugar, Salt, Creamer, Stirrer, sTopping, sFlavor = "", status;
+
         int num, orderId, intQuantity;
         SqlConnection con = new SqlConnection(connectionString);
 
@@ -273,6 +274,18 @@ namespace Order
         protected void submitDelete_Click(object sender, EventArgs e)
         {
             Response.Redirect("OrderDeleteConfirm.aspx");
+        }
+
+        protected void submitCancel_Click(object sender, EventArgs e)
+        {
+            object refUrl = ViewState["RefUrl"];
+            if (refUrl != null)
+            {
+                Response.Redirect(refUrl.ToString());
+            } else
+            {
+                Response.Redirect("UserOrderRepeater.aspx");
+            }
         }
 
         private void setCoffee()

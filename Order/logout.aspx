@@ -7,6 +7,6 @@
         <br />
         <asp:Button ID="logoutConfirm" runat="server" Text="Logout" OnClick="logoutConfirm_Click" CssClass="btnShort"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="logoutCancel" runat="server" Text="Cancel" OnClick="logoutCancel_Click" CssClass="btnShort"/>
+        <input type="button" value="Back" onclick="history.go(-1);return false;" class="btnShort">
     </div>
 </asp:Content>

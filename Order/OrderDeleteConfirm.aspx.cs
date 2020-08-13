@@ -59,11 +59,6 @@ namespace Order
             }
         }
 
-        protected void cancelDelete_Click(object sender, EventArgs e)
-        {
-            Response.Redirect(Request.UrlReferrer.ToString());
-        }
-
         private void setCoffee()
         {
             string orderId = Global.OrderId;

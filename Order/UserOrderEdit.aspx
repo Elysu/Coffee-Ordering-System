@@ -72,6 +72,7 @@
 
         <asp:Button ID="submit" runat="server" Text="Update Order" OnClick="submit_Click" CssClass="submitDiscord"/>
         <asp:Button ID="submitDelete" runat="server" Text="Delete Order" Visible="false" OnClick="submitDelete_Click" CssClass="submitDiscord"/>
+        <asp:Button ID="submitCancel" runat="server" Text="Cancel" CssClass="submitDiscord" OnClick="submitCancel_Click"/>
         <br />
 
         <asp:Label ID="orderUpdateErrorMsg" runat="server" Text="" ForeColor="Red"></asp:Label>

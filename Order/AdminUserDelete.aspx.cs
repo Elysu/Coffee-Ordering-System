@@ -69,10 +69,5 @@ namespace Order
             string memberId = Global.MemberId;
             id = Int16.Parse(memberId);
         }
-
-        protected void cancelUserDelete_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminUserTable.aspx");
-        }
     }
 }

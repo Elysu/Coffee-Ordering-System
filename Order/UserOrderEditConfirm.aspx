@@ -55,6 +55,7 @@
         <br />
 
         <asp:Button ID="submitEditConfirm" runat="server" Text="Confirm" OnClick="submitConfirm_Click" CssClass="submitDiscord"/>
+        <input type="button" value="Back" onclick="history.go(-1);return false;" class="submitDiscord">
 
         <br />
 

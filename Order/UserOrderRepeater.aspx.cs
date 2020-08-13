@@ -22,6 +22,11 @@ namespace Order
                 Response.Redirect("Login.aspx");
             }
 
+            if (!Page.IsPostBack)
+            {
+                ViewState["RefUrl"] = Request.UrlReferrer.ToString();
+            }
+
             con.Open();
             string countOrdersQuery = "select count(*) from Orders where MemberId='" + Session["MemberId"].ToString() + "'";
             SqlCommand cmdCountOrders = new SqlCommand(countOrdersQuery, con);
@@ -30,6 +35,7 @@ namespace Order
 
             if (countOrders < 1)
             {
+                orderTable.Attributes["class"] = "SetToCenter";
                 orderTable.InnerHtml = "<h4>You do not have any orders yet.</h4>";
                 orderTable.InnerHtml += "<a href='ordertest.aspx'>Click here to order coffees</a>";
             }

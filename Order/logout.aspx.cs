@@ -17,11 +17,6 @@ namespace Order
             }
         }
 
-        protected void logoutCancel_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("index.aspx");
-        }
-
         protected void logoutConfirm_Click(object sender, EventArgs e)
         {
             Session.Clear();

@@ -23,7 +23,7 @@
                             <p id="pAddOns" class='tm-product-description'>Add Ons: <%# AddOns(Eval("BrownSugar").ToString(), Eval("WhiteSugar").ToString(), Eval("Salt").ToString(), Eval("Creamer").ToString(), Eval("Stirrer").ToString()) %></p>
                         </div>
                         <div class='tm-product-price'>
-                            <a class='tm-product-price-link tm-handwriting-font'>$<%# Eval("TotalPrice") %></a>
+                            <h4 class='tm-product-price-link tm-handwriting-font'>$<%# Eval("TotalPrice") %></h4>
                         </div>
                     </div>
 

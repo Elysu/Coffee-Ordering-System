@@ -42,15 +42,6 @@ namespace Order
         protected global::System.Web.UI.WebControls.Button submitUserDelete;
 
         /// <summary>
-        /// cancelUserDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cancelUserDelete;
-
-        /// <summary>
         /// userDeleteErrorMsg control.
         /// </summary>
         /// <remarks>

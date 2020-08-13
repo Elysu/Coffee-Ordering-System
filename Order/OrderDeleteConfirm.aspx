@@ -7,7 +7,7 @@
         <br />
         <asp:Button ID="submitDelete" runat="server" Text="Yes" OnClick="submitDelete_Click" CssClass="btnShort"/>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="cancelDelete" runat="server" Text="No" OnClick="cancelDelete_Click" CssClass="btnShort"/>
+        <input type="button" value="Back" onclick="history.go(-1);return false;" class="btnShort">
         <asp:Label ID="deleteErrorMsg" runat="server" Text=""></asp:Label>
     </div>
 </asp:Content>
