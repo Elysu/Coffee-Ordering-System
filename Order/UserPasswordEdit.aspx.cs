@@ -35,6 +35,7 @@ namespace Order
                 compareConfirmPassword.IsValid)
             {
                 string currentPW = txtboxCurrentPassword.Text;
+                string newPW = txtboxNewPassword.Text;
 
                 con.Open();
                 string passwordQuery = "select MemberPassword from Members where MemberId='" + Session["MemberId"].ToString() + "'";
@@ -44,7 +45,7 @@ namespace Order
 
                 if (en.Decrypt(dbPassword) == currentPW)
                 {
-                    string updatePWQuery = "UPDATE Members SET MemberPassword='" + en.Encrypt(currentPW) + "' where MemberId='" + Session["MemberId"].ToString() + "'";
+                    string updatePWQuery = "UPDATE Members SET MemberPassword='" + en.Encrypt(newPW) + "' where MemberId='" + Session["MemberId"].ToString() + "'";
                     con.Open();
                     SqlCommand cmdUpdatePW = new SqlCommand(updatePWQuery, con);
 
