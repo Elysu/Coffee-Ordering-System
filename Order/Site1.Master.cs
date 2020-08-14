@@ -24,6 +24,9 @@ namespace Order
                 case "/contact.aspx":
                     contactButton.Attributes["class"] = "active";
                     break;
+                case "/ordertest.aspx":
+                    coffeeButton.Attributes["class"] = "active";
+                    break;
             }
 
             if (Session["MemberEmail"] != null)
