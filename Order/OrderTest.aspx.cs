@@ -101,20 +101,5 @@ namespace Order
                 Server.Transfer("OrderConfirm.aspx");
             }
         }
-
-        /*
-        protected void customDecoration_ServerValidate(object source, ServerValidateEventArgs args)
-        {
-            args.IsValid = false;
-
-            for (int i = 0; i < addOns.Items.Count; i++)
-            {
-                if (addOns.Items[i].Selected)
-                {
-                    args.IsValid = true;
-                }
-            }
-        }
-        */
     }
 }
