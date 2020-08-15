@@ -14,7 +14,7 @@
                   <h2 class="white-text tm-handwriting-font tm-welcome-header"><img src="img/header-line.png" alt="Line" class="tm-header-line">&nbsp;Welcome To&nbsp;&nbsp;<img src="img/header-line.png" alt="Line" class="tm-header-line"></h2>
                   <h2 class="gold-text tm-welcome-header-2">Cafe House</h2>
                   <p class="gray-text tm-welcome-description"></p>
-                  <a id="btnDetails" runat="server" href="#main" class="tm-more-button tm-more-button-welcome">Details</a>
+                  <a id="btnDetails" runat="server" href="#main" class="tm-more-button tm-more-button-welcome">Contact Us</a>
                 </div>
                 <img src="img/table-set.png" alt="Table Set" class="tm-table-set img-responsive">             
               </div>      
